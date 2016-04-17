@@ -171,7 +171,6 @@
 	margin-top: 110px;
 	width: 480px;
 	height: 270px;	
-	background-image: url(../img/new_01.png);
 }
 
 .section1>.new_02{
@@ -179,7 +178,6 @@
 	margin-top: 20px;
 	width: 400px;
 	height: 225px;
-	background-image: url(../img/new_02.png);
 }
 
 .section1>.new_03{
@@ -187,13 +185,11 @@
 	margin-top: 20px;
 	width: 400px;
 	height: 225px;
-	background-image: url(../img/new_03.png);
 }
 
 .section1>.new_title>.new_04{
 	width: 320px;
 	height: 180px;
-	background-image: url(../img/new_04.png);
 }
 
 .section1Btn{

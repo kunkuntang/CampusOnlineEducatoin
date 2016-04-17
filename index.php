@@ -39,14 +39,26 @@ include_once 'conn.php';
 		<img class="bnBgTitle" src="img/bnBgTitle.png"/>
 	</div>
 	<div class="section1">
+		<?php 
+			
+			$sql = "select id,biaoti,shouyetupian from xinwentongzhi where shouyetupian<>'' order by id desc limit 4";	
+			$query = mysql_query($sql);
+            $rowscount = mysql_num_rows($query);
+		?>
 		<div class="new_title">
 			<p class="new_title1">最新动态</p>
 			<p class="new_title2">校内最新资讯，站内最新动态</p>
-			<div class="new_04"></div>
+			<img class="new_04" src="<?php echo mysql_result($query, 3, "shouyetupian"); ?>"/>
+			<!--<div class="new_04"></div>-->
 		</div>
+		<img class="new_01" src="<?php echo mysql_result($query, 0, "shouyetupian"); ?>"/>
+		<img class="new_02" src="<?php echo mysql_result($query, 1, "shouyetupian"); ?>"/>
+		<img class="new_03" src="<?php echo mysql_result($query, 2, "shouyetupian"); ?>"/>
+		<!--
 		<div class="new_01"></div>
 		<div class="new_02"></div>
 		<div class="new_03"></div>
+		-->
 		<div class="section1Btn moreBtn">查看更多&gt;&gt;</div>
 	</div>
 	<div class="section2">
@@ -55,22 +67,22 @@ include_once 'conn.php';
 			<p class="tec_title2">也许有那么一个人可以点亮你夜行的路</p>
 		</div>
 		<div class="tecsPicCon">
+			<?php 
+    			$sql="select * from jiaoshixinxi where zhaopian<>'' order by id desc limit 4";
+				$query=mysql_query($sql);
+  				$rowscount=mysql_num_rows($query);
+	 			for($i=0;$i<$rowscount;$i++){
+					if($i<=4)
+					{
+  			?>
 			<div class="tecPicCon">
-				<img src="img/teacher1.png"/>
+				<img src="<?php echo mysql_result($query, $i, "zhaopian"); ?>"/>
 				<span class="tecName">教师名</span>
 			</div>
-			<div class="tecPicCon">
-				<img src="img/teacher2.png"/>
-				<span class="tecName">教师名</span>
-			</div>
-			<div class="tecPicCon">
-				<img src="img/teacher3.png"/>
-				<span class="tecName">教师名</span>
-			</div>
-			<div class="tecPicCon">
-				<img src="img/teacher4.png"/>
-				<span class="tecName">教师名</span>
-			</div>
+			<?php
+					}
+				}
+  			?>
 		</div>
 		<div class="section2Btn moreBtn">查看更多&gt;&gt;</div>
 	</div>
@@ -112,7 +124,7 @@ include_once 'conn.php';
 			</div>
 			<div>
 				<span>
-					后台入口
+					<a href="login.html">后台入口</a>
 				</span>
 				<ul>
 					<li></li>
