@@ -1,0 +1,99 @@
+.body{
+	width: 1024px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.body>.new_Con{
+	padding-top: 60px;
+	margin: 0 auto;
+	font-family: "Î¢ÈíÑÅºÚ";
+	font-size: 14px;
+	color: #919191;
+}
+
+.body>.new_Con>.new_titlle_nav{
+	width: 100%;
+	padding: 30px 0;
+	border-bottom: 2px solid #c6c6c6;
+}
+
+
+.body>.new_Con>.gonggao_container{
+	padding-top: 50px;
+	width: 280px;
+	float: left;
+}
+
+.body>.new_Con>.gonggao_container>.gonggao_show{
+	width: 200px;
+	margin: 0 auto;	
+	border: 1px solid #e2e2e2;
+	padding-bottom: 40px;
+}
+
+.body>.new_Con>.gonggao_container>.gonggao_show>.gonggao_title{
+	height: 40px;
+	width: 100%;
+	line-height: 40px;
+	text-align: center;
+	background-color: #f4f4f5;
+	font-size: 16px;
+}
+
+.body>.new_Con>.gonggao_container>.gonggao_show>.gonggao_content{
+	width: 160px;
+	margin: 0 auto;
+	text-align: center;
+	margin-top: 40px;
+}
+
+
+.body>.new_Con>.new{
+	border-left: 2px solid #c6c6c6;
+	float: left;
+	padding-top: 20px;
+	padding-left: 20px;
+	padding-bottom: 40px;
+	font-size: 16px;
+	width: 720px;
+}
+
+.body>.new_Con>.new>.new_title{
+	font-size: 28px;
+	padding-bottom: 40px;
+	font-size: 38px;
+	color: #000000;
+}
+
+.body>.new_Con>.new>.new_detail{
+	padding-bottom: 40px;
+	padding-left: 20px;
+}
+
+.body>.new_Con>.new>.new_detail>div{
+	float: left;
+	height: 20px;
+	padding-left: 30px;
+	padding-right: 20px;
+	line-height: 20px;
+}
+
+.body>.new_Con>.new>.new_detail>.new_time{
+	background: url(../img/clock.png) left no-repeat;
+}
+
+.body>.new_Con>.new>.new_detail>.new_hot{
+	background: url(../img/fire.png) left no-repeat;
+	
+}
+.news_content{
+	color: #474747;
+	line-height: 32px;
+}
+
+.news_content>P{
+	text-indent: 2em;
+}
+.news_content>h4{
+	margin-top: 30px;
+}

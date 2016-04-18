@@ -1,4 +1,4 @@
-CSSåˆå§‹åŒ–
+CSS³õÊ¼»¯
 
 body,
 h1,
@@ -11,7 +11,7 @@ hr,
 p,
 blockquote,
 
-/* structural elements ç»“æ„å…ƒç´  */
+/* structural elements ½á¹¹ÔªËØ */
 
 dl,
 dt,
@@ -20,22 +20,22 @@ ul,
 ol,
 li,
 
-/* list elements åˆ—è¡¨å…ƒç´  */
+/* list elements ÁĞ±íÔªËØ */
 
 pre,
 
-/* text formatting elements æ–‡æœ¬æ ¼å¼å…ƒç´  */
+/* text formatting elements ÎÄ±¾¸ñÊ½ÔªËØ */
 
 fieldset,
 button,
 input,
 textarea,
 
-/* form elements è¡¨å•å…ƒç´  */
+/* form elements ±íµ¥ÔªËØ */
 
 th,
 td {
-	/* table elements è¡¨æ ¼å…ƒç´  */
+	/* table elements ±í¸ñÔªËØ */
 	margin: 0;
 	padding: 0;
 }
@@ -55,7 +55,7 @@ textarea {
 }
 a {
 	text-decoration: none;
-	color: #FFFFFF
+	color: #FFFFFF;
 }body,
 h1,
 h2,
@@ -67,7 +67,7 @@ hr,
 p,
 blockquote,
 
-/* structural elements ç»“æ„å…ƒç´  */
+/* structural elements ½á¹¹ÔªËØ */
 
 dl,
 dt,
@@ -76,22 +76,22 @@ ul,
 ol,
 li,
 
-/* list elements åˆ—è¡¨å…ƒç´  */
+/* list elements ÁĞ±íÔªËØ */
 
 pre,
 
-/* text formatting elements æ–‡æœ¬æ ¼å¼å…ƒç´  */
+/* text formatting elements ÎÄ±¾¸ñÊ½ÔªËØ */
 
 fieldset,
 button,
 input,
 textarea,
 
-/* form elements è¡¨å•å…ƒç´  */
+/* form elements ±íµ¥ÔªËØ */
 
 th,
 td {
-	/* table elements è¡¨æ ¼å…ƒç´  */
+	/* table elements ±í¸ñÔªËØ */
 	margin: 0;
 	padding: 0;
 }
@@ -114,7 +114,7 @@ a {
 }
 
 
-æ¸…æµ®åŠ¨
+Çå¸¡¶¯
 
 .clearfix:after{
 	content: "";
@@ -130,6 +130,6 @@ a {
 	text-align: center;
 	font-size: 18px;
 	margin: 0 auto;
-	font-family: "å¾®è½¯é›…é»‘";
+	font-family: "Î¢ÈíÑÅºÚ";
 }
 

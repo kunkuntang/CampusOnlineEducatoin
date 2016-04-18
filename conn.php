@@ -7,6 +7,7 @@ $database='jpkczxfbwy';//数据库名
 $conn=@mysql_connect($host,$user,$password) or die('数据库连接失败！');
 @mysql_select_db($database) or die('没有找到数据库！');
 mysql_query("set names 'gb2312'");
+header("Content-Type: text/html; charset=gb2312");
 function getoption($ntable,$nzd)
 {
 		$sql="select ".$nzd." from ".$ntable." order by id desc";

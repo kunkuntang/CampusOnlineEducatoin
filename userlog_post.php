@@ -6,7 +6,7 @@ include_once 'conn.php';
 	
 	$username=$_POST['username'];
 	$pwd=$_POST['pwd1'];
-	$cx=$_POST['cx'];
+	$cx=$_POST['person'];
 	//$userpass=md5($userpass);
 
 		if ($username!="" && $pwd!="")
