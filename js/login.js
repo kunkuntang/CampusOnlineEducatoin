@@ -1,9 +1,9 @@
 function openNew() {
-	//è·å–é¡µé¢çš„é«˜åº¦å’Œå®½åº¦
+	//»ñÈ¡Ò³ÃæµÄ¸ß¶ÈºÍ¿í¶È
 	var sWidth = document.body.scrollWidth;
 	var sHeight = document.body.scrollHeight;
 
-	//è·å–é¡µé¢çš„å¯è§†åŒºåŸŸé«˜åº¦å’Œå®½åº¦
+	//»ñÈ¡Ò³ÃæµÄ¿ÉÊÓÇøÓò¸ß¶ÈºÍ¿í¶È
 	var wHeight = document.documentElement.clientHeight;
 
 	var oMask = document.createElement("div");
@@ -16,28 +16,28 @@ function openNew() {
 	
 	var htmlCon = 	'<div class="loginCon">'+
 						'<form class="person" method="post" action="userlog_post.php">'+
-							'<input type="text" name="username" id="user" value="" placeholder="è´¦å·å" />'+
-							'<input type="password" name="pwd1" id="pwd" value="" placeholder="å¯†ç "/>'+
-							'<div class="checkboxCon"><input type="radio" name="person" id="stu" value="å­¦ç”Ÿ" checked="checked" />å­¦ç”Ÿ'+
-							'<input type="radio" name="person" id="teach" value="teach" />æ•™å¸ˆ</div>'+
-							'<input type="submit" id="submit" value="ç™»å½•"/>'+
-							'<span class="reg">æ²¡æœ‰è´¦å·ï¼Ÿç°åœ¨<a href="reg">æ³¨å†Œ</a></span>'+
+							'<input type="text" name="username" id="user" value="" placeholder="ÕËºÅÃû" />'+
+							'<input type="password" name="pwd1" id="pwd" value="" placeholder="ÃÜÂë"/>'+
+							'<div class="checkboxCon"><input type="radio" name="person" id="stu" value="Ñ§Éú" checked="checked" />Ñ§Éú'+
+							'<input type="radio" name="person" id="teach" value="teach" />½ÌÊ¦</div>'+
+							'<input type="submit" id="submit" value="µÇÂ¼"/>'+
+							'<span class="reg">Ã»ÓĞÕËºÅ£¿ÏÖÔÚ<a href="reg">×¢²á</a></span>'+
 						'</form>'+
 					'</div>'+
-					'<div id="close">ç‚¹å‡»å…³é—­</div>';
+					'<div id="close">µã»÷¹Ø±Õ</div>';
 	oLogin.innerHTML = htmlCon;
 	document.body.appendChild(oLogin);
 
-	//è·å–ç™»é™†æ¡†çš„å®½å’Œé«˜
+	//»ñÈ¡µÇÂ½¿òµÄ¿íºÍ¸ß
 	var dHeight = oLogin.offsetHeight;
 	var dWidth = oLogin.offsetWidth;
-	//è®¾ç½®ç™»é™†æ¡†çš„leftå’Œtop
+	//ÉèÖÃµÇÂ½¿òµÄleftºÍtop
 	oLogin.style.left = sWidth / 2 - dWidth / 2 + "px";
 	oLogin.style.top = wHeight / 2 - dHeight / 2 + "px";
-	//ç‚¹å‡»å…³é—­æŒ‰é’®
+	//µã»÷¹Ø±Õ°´Å¥
 	var oClose = document.getElementById("close");
 
-	//ç‚¹å‡»ç™»é™†æ¡†ä»¥å¤–çš„åŒºåŸŸä¹Ÿå¯ä»¥å…³é—­ç™»é™†æ¡†
+	//µã»÷µÇÂ½¿òÒÔÍâµÄÇøÓòÒ²¿ÉÒÔ¹Ø±ÕµÇÂ½¿ò
 	oClose.onclick = oMask.onclick = function() {
 		document.body.removeChild(oLogin);
 		document.body.removeChild(oMask);
@@ -46,7 +46,7 @@ function openNew() {
 
 window.onload = function() {
 	var oBtn = document.getElementById("btnLogin");
-	//ç‚¹å‡»ç™»å½•æŒ‰é’®
+	//µã»÷µÇÂ¼°´Å¥
 	oBtn.onclick = function() {
 		openNew();
 		return false;
@@ -56,7 +56,7 @@ window.onload = function() {
 /*
  <div id="login" style="left: 0px; top: 298px;">
 	<div class="loginCon">
-		<div id="close">ç‚¹å‡»å…³é—­</div>
+		<div id="close">µã»÷¹Ø±Õ</div>
 	</div>
 </div>
  

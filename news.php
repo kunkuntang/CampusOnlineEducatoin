@@ -7,12 +7,15 @@ $biaoti = $_POST["biaoti"];
 <!doctype html>
 <html lang="en">
 	<head>
+		<meta charset="UTF-8" />
 		<title>
 			校内新闻
 		</title>
-		<link rel="stylesheet" href="css/reset.css" />
-		<link rel="stylesheet" href="css/tittle.css" />
-		<link rel="stylesheet" href="css/news.css" />
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/nav.css"/>
+		<link rel="stylesheet" type="text/css" href="css/gonggao.css"/>
+		<link rel="stylesheet" type="text/css" href="css/news.css"/>
+		<link rel="stylesheet" type="text/css" href="css/footer.css"/>
 		<link rel="stylesheet" type="text/css" href="css/login.css"/>
 		<script src="js/jquery-1.11.3.min.js">
 		</script>
@@ -20,101 +23,76 @@ $biaoti = $_POST["biaoti"];
 		</script>
 	</head>
 	<body>
-		<?php
-		include_once 'header.php';
-	?>
+		<?php require_once 'header.php'
+		?>
+		<div class="title1">
+		</div>
 		<div class="body">
-			<div class="new_Con">
-				<!--新闻公告-->
-				<div class="new_titlle_nav">
-					<!--新闻文章位置-->
-					站内新闻  &gt;  面包屑设计
-				</div>
-				<div class="gonggao_container">
-					<!--新闻公告外框-->
-					<div class="gonggao_show">
-						<div class="gonggao_title">
-							系统公告
-						</div>
-						<div class="gonggao_content">
-							欢迎大家登陆我站，我站主要是为广大朋友精心制作的一个系统，希望大家能够在我站获得一个好心情，谢谢！
-						</div>
-					</div>
-				</div>
-				<div class="new">
-					<!--新闻文章外框-->
-					<div class="new_title">
-						面包屑设计
-					</div><!--新闻文章标题-->
-					<div class="new_detail">
-						<!--新闻文章信息外框-->
-						<div class="new_time">
-							2015/10/12
-						</div>
-						<div class="new_hot">
-							热度(2000)
-						</div>
-					</div>
-					<div class="news_content">
-						<!--新闻文章正文-->
-						<h4>
-							What? 什么是面包屑
-						</h4>
-						<p>面包屑是作为辅助和补充的导航方式（secondary navigation scheme），它能让用户知道在网站或应用中所处的位置并能方便地回到原先的地点。 最常见的面包屑的样式是：横向的文字链接，由大于号“>”分开，这个符号也暗示了它们的层级关系。</br></p>
-						【 面包屑的分类】</br>
-						<p>1.基于用户所在的层级位置。（Location-based）</br>
-						基于位置的面包屑用于告知用户在当前网站中所在的结构层级。用在具有多级导航（通常具有2级以上导航）的网站中。
-						<p>面包屑设计</p>
-						<p>2.基于产品的属性。(Attribute-based)</br>
-						这种类型的面包屑常出现在具有大量类别产品和服务的网站中，如电子商务网站，网上教学服务等。</br>
-						面包屑设计</br></p>
-						<p>3.基于用户的足迹。(Path-based)</br></p>
-						<p>显示用户浏览的轨迹，面包屑之间没有明显的层级关系。</br></p>
-						<h4>
-							Why? 为什么使用面包屑（面包屑的好处）
-						</h4>
-						<p>1.面包屑作为用户寻找路径的一种辅助手段，能方便他们定位和导航。</br></p>
-						<p>2.面包屑可以减少的用户返回上一级页面的所需的操作次数。</br></p>
-						<p>3.临时性，动态性，占用屏幕空间小，干扰性小。</br></p>
-						<p>4.降低网站访问者的总体跳出率。（当用户从别处链接到网页，或者从搜索引擎查找到网页，则面包屑的存在能帮助用户快速了解当前的层级位置，并引导用户查看网站的其余部分。减少了看完直接跳走的用户数量。）</br></p>
-						<h4>
-							When? 何时使用面包屑
-						</h4>
-						<p>1. 存在大量的分级内容的网站中。</br></p>
-						<p>大型的电子商务网站是典型的例子，里面有大量的产品分别归属于不同的大类别及细分类别。</br></p>
-						面包屑设计</br></p>
-						<p>2. 在一些引导性的网络应用或者软件安装进程中，面包屑也常被用来指示当前以及剩余的操作步骤。类似于进程条的变种。</br></p>
-						<p>3. 层次简单的页面中一般不使用面包屑，但是当面包屑能显著帮助到浏览并提高他们定位能力时，也建议采用面包屑。</br></p>
-						<p>相册浏览就是一个典型的例子，结构层次并不复杂，但用户在特定几个页面之间跳转的频率会比较高（如相册首页，相片缩略图页，相片浏览页等），所以面包屑的存在对提高此处的浏览效率是很有帮助的。</br></p>
-						<p>面包屑设计</br></p>
-						<p>注意点：面包屑不能替代有效的主导航，它是一个辅助功能；一个允许用户定位他们在哪里的辅助导航方案。</br></p>
-						<h4>
-							How? 如何设计面包屑
-						</h4>
-						【面包屑连接符的主要样式】</br>
-						<p>面包屑设计</br></p>
-						<p>综合评估以上样式，并考虑到面包屑的包含关系和指示性，建议使用以下两种连接符：</br>
-						<p>面包屑设计</br></p>
-						【面包屑的位置】</br>
-						<p>通常出现在页面的左上或者右上部分，而且主要是在导航下面或者内容区的上面。</br></p>
-						【面包屑的大小】</br>
-						<p>面包屑是一种辅助导航，在页面中不应该起支配作用。面包屑和主导航相比至少要比较小、或不太突出。在确定面包屑大小的时候，一个较很好的方法是，当访问这个页面的时候，它不应该是页面中最醒目的元素。如果第一眼就注意到了面包屑，可能就需要再弱化一点。</br></p>
-						<p>面包屑设计</br></p>
-						<p>上图中的面包屑过于醒目，干扰到了主导航，甚至喧宾夺主。</br></p>
-						<h4>
-							Extension 面包屑设计扩展
-						</h4>
-						【带下拉列表的面包屑】</br>
-						<p>香港雅虎，淘宝网等网站的面包屑中有下拉列表，可以方便用户快速跳转到同类或其他类别的新闻和产品。</br></p>
-						<p>面包屑设计</br></p>
-						【交互式面包屑】</br>
-						<p>面包屑设计</br></p>
-						<p>Delicious中的tag分组已面包屑的形式出现在网页头部，按前文提到的面包屑分类此处属于一种“基于用户足迹”(Path-based)的面包屑。记录了用户浏览tag分组的顺序。同时这些面包屑还可以被及时“干掉”，方便了对内容的管理，真是别出心裁的设计。</br></br></p>
-						【回顾总结】</br>
-						<p>是否还记得关于面包屑的3W+H+E？</br></p>
-					</div>
+			<div class="new_content">
+				<?php require_once 'gonggao.php'
+				?>
+				<div class="new_list">
+					<?php 
+    					$sql="select * from xinwentongzhi where 1=1";
+  
+						if ($biaoti!=""){
+							$sql=$sql." and biaoti like '%$biaoti%'";
+						}
+						if($lb!=""){
+							$sql=$sql." and leibie='$lb'";
+						}
+  						$sql=$sql." order by id desc";
+						$query=mysql_query($sql);
+					  	$rowscount=mysql_num_rows($query);
+					  	if($rowscount==0)
+					  	{}
+					  	else{
+					  		$pagelarge=10;//每页行数；
+					  		$pagecurrent=$_GET["pagecurrent"];
+					  		if($rowscount%$pagelarge==0){
+								$pagecount=$rowscount/$pagelarge;
+					  		}
+					  		else{
+					   			$pagecount=intval($rowscount/$pagelarge)+1;
+					  		}
+					  		if($pagecurrent=="" || $pagecurrent<=0){
+								$pagecurrent=1;
+							}
+							if($pagecurrent>$pagecount){
+								$pagecurrent=$pagecount;	
+							}
+							$ddddd=$pagecurrent*$pagelarge;
+							if($pagecurrent==$pagecount){
+								if($rowscount%$pagelarge==0){
+									$ddddd=$pagecurrent*$pagelarge;
+								}
+								else{
+									$ddddd=$pagecurrent*$pagelarge-$pagelarge+$rowscount%$pagelarge;
+								}
+							}
+							for($i=$pagecurrent*$pagelarge-$pagelarge;$i<$ddddd;$i++){
+					?>
+								<ul>
+									<li class="new_caption"><a href="new.php?id=<?php echo mysql_result($query,$i,"id");?>"><?php echo mysql_result($query,$i,"biaoti");?></a></li>
+									<li><?php echo mysql_result($query,$i,"addtime");?></li>
+								</ul>
+					<?php
+						}
+					}
+					?>
+				<div class="page">
+					<a href="news.php?pagecurrent=<?php echo $pagecount;?>&lb=<?php echo $lb;?>" class="last">&gt;&gt;</a>
+					<a href="news.php?pagecurrent=<?php echo $pagecurrent+1;?>&lb=<?php echo $lb;?>" class="next">&gt;</a>
+					<span class="curpage"><?php echo $pagecurrent;?>/<?php echo $pagecount;?></span>
+					<a href="news.php?pagecurrent=<?php echo $pagecurrent-1;?>&lb=<?php echo $lb;?>" class="pre">&lt;</a>
+					<a href="news.php?pagecurrent=1	&lb=<?php echo $lb;?>" class="first">&lt;&lt;</a>
 				</div>
 			</div>
 		</div>
+	</div>
+	<?php require_once 'footer.php'
+
+
+					?>
 	</body>
 </html>
