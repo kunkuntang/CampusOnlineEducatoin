@@ -8,9 +8,9 @@
 	width: 1024px;
 	margin: 0 auto;
 	overflow: hidden;
-	font-size: ;
 	font-family: "Î¢ÈíÑÅºÚ";
 	color: #777777;
+	padding-bottom: 50px;
 }
 
 .courseSea{
@@ -66,6 +66,110 @@
 	width: 545px;
 	padding-top: 20px;
 	padding-left: 40px;
-	
-	
+	float: left;
+}
+
+.courseWareList>.courseCon{
+	width: 100%;
+	color: #777777;
+	overflow: hidden;
+	border-bottom: 1px solid #f3eeff;
+}
+
+.courseWareList>.courseCon>.fileLogo{
+	width: 65px;
+	height: 65px;
+	float: left;
+	margin-right: 10px;
+}
+
+.courseWareList>.courseCon>.file,
+.courseWareList>.courseCon>.fileDetail{
+	float: left;
+	width: 470px;
+}
+
+.fileName{
+	font-size: 20px;
+}
+
+.fileTime{
+	font-size: 12px;
+	float: right;
+	vertical-align: text-top;
+}
+
+.courseWareList>.courseCon>.fileDetail{
+	font-size: 16px;
+	line-height: 47.5px;
+	width: 470px;
+	float: left;
+	line-height: 47.5px;
+}
+
+.fileNo{
+	margin-right: 25px;
+}
+
+.fileBelong{
+	margin-right: 30px;
+}
+
+.more{
+	display: block;
+	width: 65px;
+	height: 24px;
+	border: 1px;
+	font-size: 12px;
+	border: 1px solid #ababab;
+	float: right;
+	text-align: center;
+	line-height: 24px;
+	color: #777777;
+	margin-top: 10px;
+}
+
+.page{
+	height: 24px;
+	float: right;
+	margin-top: 80px;
+}
+
+.page>a{
+	color: #5e5e5e;
+	display: block;
+	float: right;
+	height: 100%;
+	border: 1px solid #262334;
+	line-height: 24px;
+	text-align: center;
+	cursor: pointer;
+	margin-left: 15px;
+}
+
+.page>a:hover{
+	background-color: #e9e9ea;
+}
+
+.page>.curpage{
+	margin-left: 20px;
+	margin-right: 5px;
+	display: block;
+	float: right;
+	height: 24px;
+	line-height: 24px;
+	font-size: 14px;
+	font-family: "Î¢ÈíÑÅºÚ";
+	color: #919191;
+	border: 0;
+}
+
+.page>.first,
+.page>.last{
+	width: 30px;
+}
+
+.page>.pre,
+.page>.next{
+	width: 20px;
 }
