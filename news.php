@@ -90,6 +90,9 @@ $biaoti = $_POST["biaoti"];
 			</div>
 		</div>
 	</div>
-	<?php require_once 'footer.php' ?>
+	<?php require_once 'footer.php'
+
+
+					?>
 	</body>
 </html>

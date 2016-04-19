@@ -1,10 +1,13 @@
+.title1{
+	height: 60px;
+}
 .body{
 	padding-top: 60px;	width: 100%;
 	background: url(../img/news.png) top center no-repeat;
 }
 .body>.new_content{
 	margin: 0 auto;
-	min-height: 420px;
+	min-height: 400px;
 	padding-top: 100px;
 	width: 1024px;;
 	overflow: hidden;
@@ -16,7 +19,7 @@
 }
 
 .body>.new_content>.new_list{
-	min-height: 420px;
+	min-height: 400px;
 	border-top: 2px solid #c6c6c6;
 	padding-left: 25px;
 	padding-top: 20px;
