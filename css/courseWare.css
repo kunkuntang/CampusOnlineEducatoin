@@ -1,0 +1,71 @@
+.body{
+	width: 100%;
+	background: url(../img/Courseware.png) top no-repeat;
+	padding-top: 160px;
+}
+
+.courseWare{
+	width: 1024px;
+	margin: 0 auto;
+	overflow: hidden;
+	font-size: ;
+	font-family: "Î¢ÈíÑÅºÚ";
+	color: #777777;
+}
+
+.courseSea{
+	float: left;
+	padding-top: 20px;
+	padding-right: 60px;
+}
+
+#form1{
+	width: 242px;
+}
+
+#form1>input{
+	font-size: 16px;
+	color: #919191;
+	font-family: "Î¢ÈíÑÅºÚ";
+	width: 230px;
+	height: 40px;
+	padding-left: 10px;
+	margin-top: 10px;
+	line-height: 40px;
+	border: 1px solid #c6c6c6;
+}
+
+#form1>select{
+	width: 242px;
+	height: 40px;
+	padding-left: 10px;
+	margin-top: 10px;
+	font-size: 16px;
+	color: #919191;
+	font-family: "Î¢ÈíÑÅºÚ";
+	line-height: 40px;
+}
+
+#form1>input::-webkit-input-placeholder{
+	font-size: 16px;
+	color: #919191;
+	font-family: "Î¢ÈíÑÅºÚ";
+}
+
+#form1>#submit{
+	width: 244px;
+	height: 40px;
+	margin-top: 20px;
+	text-align: center;
+	line-height: 40px;
+	background-color: #262334;
+	color: #FFFFFF;
+}
+
+.courseWareList{
+	width: 545px;
+	padding-top: 20px;
+	padding-left: 40px;
+	
+	
+}
