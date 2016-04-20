@@ -4,7 +4,7 @@ include_once 'conn.php';
 $id=$_GET["id"];
 if($_SESSION["username"]=="")
 {
-	echo "<script>javascript:alert('对不起，请您先登陆！');location.href='index.php';</script>";
+	echo "<script>javascript:alert('对不起，请您先登陆！');location.href='classFileList.php';</script>";
 	exit;
 }
 ?>
