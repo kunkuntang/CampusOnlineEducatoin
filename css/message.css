@@ -1,0 +1,168 @@
+.body{
+	width: 100%;
+	background: url(../img/message_bg.png) top no-repeat;
+	padding-top: 160px;
+	overflow: hidden;
+}
+
+.mes_Con{
+	min-height: 400px;
+	padding-bottom: 140px;
+	overflow: hidden;
+}
+
+.body>.mes_Con>.gonggao_container{
+	padding-top: 0;
+}
+
+.mes{
+	float: left;
+	width: 520px;
+	border-left: 1px solid #c6c6c6;
+	padding-left: 30px;
+	padding-bottom: 30px;
+}
+
+.mes>.textEdit{
+	width: 520px;
+	height: 100px;
+	padding-top: 10px;
+	padding-right: 15px;
+}
+
+.mes>.textEdit>input{
+	font-size: 16px;
+}
+
+.mes>.textEdit>form>#liuyan{
+	width: 508px;
+	color: #ABABAB;
+	height: 58px;
+	border: 1px solid #c6c6c6;
+	border-radius: 2px;
+	font-size: 16px;
+	padding-left: 10px;
+	padding-top: 5px;
+}
+
+.mes>.textEdit>form>#email{
+	width: 448px;
+	padding-left: 10px;
+	height: 29px;
+	color: #ababab;
+	border: 1px solid #c6c6c6;
+	border-top: 0;
+	border-radius: 2px;
+}
+
+.mes>.textEdit>form>#submit{
+	width: 60px;
+	height: 30px;
+	background-color: #947ef8;
+	color: #FFFFFF;
+	border-radius: 2px;
+	float: right;
+	border: 0;
+	cursor: pointer;
+}
+
+.mes>.liuyan_Con{
+	float: left;
+	width: 100%;
+	margin-top: 40px;
+	font-family: "Î¢ÈíÑÅºÚ";
+	border: 1px solid #e2e2e2;
+	border-radius: 1px;
+}
+
+.mes>.liuyan_Con>.liyan_userCon{
+	float: left;
+	background-color: #f0f1f6;
+	width: 520px;
+}
+
+.mes>.liuyan_Con>.liyan_userCon>img{
+	padding: 10px 5px 10px 10px;
+	width: 80px;
+	height: 80px;
+	float: left;
+}
+
+.mes>.liuyan_Con>.liyan_userCon>.liuyan_user{
+	overflow: hidden;
+	padding: 10px 15px 10px 0;
+}
+
+.mes>.liuyan_Con>.liyan_userCon>.liuyan_user>span{
+	display: block;
+	font-family: "Î¢ÈíÑÅºÚ";
+}
+
+.mes>.liuyan_Con>.liyan_userCon>.liuyan_user>.user{
+	float: left;
+	font-size: 24px;
+}
+
+.mes>.liuyan_Con>.liyan_userCon>.liuyan_user>.time{
+	float: right;
+	font-size: 12px;
+}
+
+.mes>.liuyan_Con>.liyan_userCon>.liuyan_reply{
+	padding-left: 100px;
+	padding-right: 15px;
+	font-size: 16px;
+	line-height: 20px;
+}
+
+.liuyanAdmin{
+	font-size: 14px;
+	padding: 10px 15px 10px 100px;
+	float: left;
+}
+
+.page{
+	height: 24px;
+	float: right;
+	margin-top: 80px;
+}
+
+.page>a{
+	color: #5e5e5e;
+	display: block;
+	float: right;
+	height: 100%;
+	border: 1px solid #262334;
+	line-height: 24px;
+	text-align: center;
+	cursor: pointer;
+	margin-left: 15px;
+}
+
+.page>a:hover{
+	background-color: #e9e9ea;
+}
+
+.page>.curpage{
+	margin-left: 20px;
+	margin-right: 5px;
+	display: block;
+	float: right;
+	height: 24px;
+	line-height: 24px;
+	font-size: 14px;
+	font-family: "Î¢ÈíÑÅºÚ";
+	color: #919191;
+	border: 0;
+}
+
+.page>.first,
+.page>.last{
+	width: 30px;
+}
+
+.page>.pre,
+.page>.next{
+	width: 20px;
+}
+

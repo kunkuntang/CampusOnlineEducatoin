@@ -21,7 +21,7 @@ include_once 'conn.php';
 					<li class="titleActive"><a href="index.php">首页</a></li>
 					<li><a href="news.php?lb=站内新闻">新闻</a></li>
 					<li><a href="video.php">视频</a></li>
-					<li><a href="classFile.php">课件</a></li>
+					<li><a href="classFileList.php">课件</a></li>
 					<li><a href="news.php?lb=教学大纲">大纲</a></li>
 					<li><a href="live.php">直播</a></li>
 				</ul>

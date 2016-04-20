@@ -64,15 +64,19 @@
 
 .courseWareList{
 	width: 545px;
-	padding-top: 20px;
 	padding-left: 40px;
 	float: left;
+}
+
+.courseWareList>div:nth-child(3){
+	border-bottom: none;
 }
 
 .courseWareList>.courseCon{
 	width: 100%;
 	color: #777777;
 	overflow: hidden;
+	padding: 20px 0;
 	border-bottom: 1px solid #f3eeff;
 }
 
@@ -91,6 +95,7 @@
 
 .fileName{
 	font-size: 20px;
+	color: #777777;
 }
 
 .fileTime{

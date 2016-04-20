@@ -1,5 +1,12 @@
 <?php
+session_start();
 include_once 'conn.php';
+$id=$_GET["id"];
+if($_SESSION["username"]=="")
+{
+	echo "<script>javascript:alert('对不起，请您先登陆！');location.href='index.php';</script>";
+	exit;
+}
 ?>
 <!doctype html>
 <html lang="en">
@@ -10,7 +17,8 @@ include_once 'conn.php';
 		</title>
 		<link rel="stylesheet" type="text/css" href="css/reset.css" />
 		<link rel="stylesheet" type="text/css" href="css/nav.css" />
-		<link rel="stylesheet" type="text/css" href="css/courseWare.css"/>
+		<link rel="stylesheet" type="text/css" href="css/gonggao.css"/>
+		<link rel="stylesheet" type="text/css" href="css/classFile.css"/>
 		<link rel="stylesheet" type="text/css" href="css/footer.css" />
 		<link rel="stylesheet" type="text/css" href="css/login.css"/>
 		<script src="js/jquery-1.11.3.min.js">
@@ -21,137 +29,60 @@ include_once 'conn.php';
 	<body>
 		<?php require_once 'header.php'
 		?>
-		<div class="title1">
-		</div>
 		<div class="body">
-			<div class="courseWare">
-				<div class="courseSea">
-					<form id="form1" name="form1" method="post" action="">
-						<input name="bianhao" type="text" id="bianhao" placeholder="编号："/>
-						<input name="mingcheng" type="text" id="mingcheng" placeholder="名称：" />
-						<input name="kecheng" type="text" id="kecheng" placeholder="课程：" />
-						<select name='leixing' id='leixing'>
-							<option value="">
-								类型：
-							</option>
-							<option value="rar">
-								rar
-							</option>
-							<option value="zip">
-								zip
-							</option>
-							<option value="doc">
-								doc
-							</option>
-							<option value="pdf">
-								pdf
-							</option>
-							<option value="xls">
-								xls
-							</option>
-							<option value="ppt">
-								ppt
-							</option>
-						</select>
-						<input name="faburen" type="text" id="faburen" placeholder="发布人：" />
-						<!--<button type="submit" id="submit">查找</button>-->
-						<input type="submit" name="Submit" id="submit" value="查找" />
-					</form>
-				</div>
-				<div class="courseWareList">
-					<?php 
-    					$sql="select * from jiaoxuekejian where 1=1";
-  
-						if ($_POST["bianhao"]!=""){$nreqbianhao=$_POST["bianhao"];$sql=$sql." and bianhao like '%$nreqbianhao%'";}
-						if ($_POST["mingcheng"]!=""){$nreqmingcheng=$_POST["mingcheng"];$sql=$sql." and mingcheng like '%$nreqmingcheng%'";}
-						if ($_POST["kecheng"]!=""){$nreqkecheng=$_POST["kecheng"];$sql=$sql." and kecheng like '%$nreqkecheng%'";}
-						if ($_POST["leixing"]!=""){$nreqleixing=$_POST["leixing"];$sql=$sql." and leixing like '%$nreqleixing%'";}
-						if ($_POST["faburen"]!=""){$nreqfaburen=$_POST["faburen"];$sql=$sql." and faburen like '%$nreqfaburen%'";}
-					  	$sql=$sql." order by id desc";
-					  
-						$query=mysql_query($sql);
-						$rowscount=mysql_num_rows($query);
-						if($rowscount==0)
-						{}
-					  	else
-					  	{
-						  	$pagelarge=10;//每页行数；
-						  	$pagecurrent=$_GET["pagecurrent"];
-						  	if($rowscount%$pagelarge==0)
-						  	{
-								$pagecount=$rowscount/$pagelarge;
-							}
-						  	else
-						  	{
-						   		$pagecount=intval($rowscount/$pagelarge)+1;
-						  	}
-						  	if($pagecurrent=="" || $pagecurrent<=0)
-							{
-								$pagecurrent=1;
-							}
-						 
-							if($pagecurrent>$pagecount)
-							{
-								$pagecurrent=$pagecount;
-							}
-								$ddddd=$pagecurrent*$pagelarge;
-							if($pagecurrent==$pagecount)
-							{
-								if($rowscount%$pagelarge==0)
-								{
-									$ddddd=$pagecurrent*$pagelarge;
-								}
-								else
-								{
-									$ddddd=$pagecurrent*$pagelarge-$pagelarge+$rowscount%$pagelarge;
-								}
-							}
-						
-							for($i=$pagecurrent*$pagelarge-$pagelarge;$i<$ddddd;$i++)
-							{
-				  	?>
-								<div class="courseCon">
-									<div class="fileLogo">
-										<img src="img/<?php echo mysql_result($query,$i,leixing);?>.png"/>
-										
-									</div>
-									<div class="file">
-										<span class="fileName"><?php echo mysql_result($query,$i,mingcheng);?>
-										</span>
-										<span class="fileTime"><?php echo mysql_result($query,$i,"addtime");?>
-										</span>
-									</div>
-									<div class="fileDetail">
-										<span class="fileNo"><?php echo mysql_result($query,$i,bianhao);?>
-										</span>
-										<span class="fileBelong"><?php echo mysql_result($query,$i,kecheng);?>
-										</span>
-										<span class="filePerson"><?php echo mysql_result($query,$i,faburen);?>
-										</span>
-										<a href="jiaoxuekejiandetail.php?id=<?php echo mysql_result($query,$i,"id");?>" class="more">
-											查看更多
-										</a>
-									</div>
-								</div>
+			<div class="file_Con">
+				<div class="file_title_nav">
 					<?php
-							}
-						}
+					$sql = "select * from jiaoxuekejian where id=" . $id;
+					$query = mysql_query($sql);
 					?>
-					<div class="page">
-						<a href="news.php?pagecurrent=<?php echo $pagecount;?>&lb=<?php echo $lb;?>" class="last">&gt;&gt;</a>
-						<a href="news.php?pagecurrent=<?php echo $pagecurrent+1;?>&lb=<?php echo $lb;?>" class="next">&gt;</a>
-						<span class="curpage"><?php echo $pagecurrent;?>/<?php echo $pagecount;?></span>
-						<a href="news.php?pagecurrent=<?php echo $pagecurrent-1;?>&lb=<?php echo $lb;?>" class="pre">&lt;</a>
-						<a href="news.php?pagecurrent=1	&lb=<?php echo $lb;?>" class="first">&lt;&lt;</a>
-					</div>
+					<!--新闻文章位置-->
+					<a href="classFileList.php">
+						教学课件
+					</a>  &gt;  <?php echo mysql_result($query,0,mingcheng);?>
 				</div>
+				<?php require_once 'gonggao.php'
+				?>
+				<?php 
+					$rowscount=mysql_num_rows($query);
+					if($rowscount>0)
+					{
+				?>
+						<div class="file">
+							<!--新闻文章标题-->
+							<div class="file_title">
+								<?php echo mysql_result($query,0,mingcheng);?>
+							</div>
+							<!--新闻文章外框-->
+							<div class="file_detail">
+								<!--课件编号-->
+								<div class="file_No">
+									<?php echo mysql_result($query,0,bianhao);?>
+								</div>
+								<div class="file_time">
+									<?php echo mysql_result($query,$i,"addtime");?>
+								</div>
+								<div class="file_belong">
+									<?php echo mysql_result($query,0,kecheng);?>
+								</div>
+								<!--发布人-->
+								<div class="file_person">
+									<?php echo mysql_result($query,0,faburen);?>
+								</div>
+							</div>
+							<!--新闻文章信息外框-->
+							<!--新闻文章正文-->
+							<div class="files_content">
+								<?php echo mysql_result($query,0,jianjie);?>
+							</div>
+							<a class="download" href="<?php echo mysql_result($query,0,kejian);?>">立即下载</a>
+						</div>
+				<?php
+					}
+				?>
 			</div>
 		</div>
-		<?php require_once 'footer.php' ?>
-			<script type="text/javascript">
-			window.onload = function(){
-				document.getElementById("leixing").value = "<?php echo $_POST["leixing"];?>";
-			}
-		</script>
+		<?php require_once 'footer.php'
+		?>
 	</body>
 </html>

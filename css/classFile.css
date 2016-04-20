@@ -1,0 +1,96 @@
+.body{
+	width: 1024px;
+	margin: 0 auto;
+	overflow: hidden;
+	padding-bottom: 200px;
+}
+.body>.file_Con{
+	padding-top: 60px;
+	margin: 0 auto;
+	font-family: "Î¢ÈíÑÅºÚ";
+	font-size: 14px;
+	color: #919191;
+}
+
+.body>.file_Con>.file_title_nav{
+	width: 100%;
+	padding: 30px 0;
+	border-bottom: 2px solid #c6c6c6;
+}
+
+.body>.file_Con>.file_title_nav a{
+	color: #919191;
+}
+
+.body>.file_Con>.file{
+	border-left: 2px solid #c6c6c6;
+	float: left;
+	padding-top: 20px;
+	padding-left: 20px;
+	padding-bottom: 40px;
+	font-size: 16px;
+	width: 720px;
+	min-height: 400px;
+	position: relative;
+}
+
+.body>.file_Con>.file>.file_title{
+	font-size: 28px;
+	padding-bottom: 40px;
+	font-size: 38px;
+	color: #000000;
+}
+
+.body>.file_Con>.file>.file_detail{
+	padding-bottom: 40px;
+	padding-left: 20px;
+}
+
+.body>.file_Con>.file>.file_detail>div{
+	float: left;
+	height: 20px;
+	padding-left: 30px;
+	padding-right: 20px;
+	line-height: 20px;
+}
+
+.body>.file_Con>.file>.file_detail>.file_time{
+	background: url(../img/clock.png) left no-repeat;
+}
+
+.body>.file_Con>.file>.file_detail>.file_belong{
+	background: url(../img/file.png) left no-repeat;
+	
+}
+
+.body>.file_Con>.file>.file_detail>.file_person{
+	background: url(../img/editor.png) left no-repeat;
+}
+
+.files_content{
+	color: #474747;
+	line-height: 32px;
+}
+
+.files_content>P{
+	text-indent: 2em;
+}
+.files_content>h4{
+	margin-top: 30px;
+}
+
+.download{
+	width: 160px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	background-color: #262334;
+	color: #FFFFFF;
+	font-family: "Î¢ÈíÑÅºÚ";
+	font-size: 16px;
+	position: absolute;
+	bottom: 0;
+	left: 20px;
+	display: block;
+}
+
