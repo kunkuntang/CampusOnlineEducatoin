@@ -14,7 +14,7 @@
 			</div>
 			<div>
 				<span>
-					后台留言
+					<a href="message.php">后台留言</a>
 				</span>
 				<ul>
 					<li></li>
@@ -36,6 +36,6 @@
 					<li></li>
 				</ul>
 			</div>
-			<p class="copyright">Copyright &copy;2016G-Try</p>
+			<p class="copyright">Copyright &copy;2016&nbsp;G-Try</p>
 		</div>
 	</div>

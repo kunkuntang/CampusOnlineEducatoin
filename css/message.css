@@ -6,6 +6,8 @@
 }
 
 .mes_Con{
+	width: 1024px;
+	margin: 0 auto;
 	min-height: 400px;
 	padding-bottom: 140px;
 	overflow: hidden;

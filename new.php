@@ -2,7 +2,10 @@
 session_start();
 include_once 'conn.php';
 $id=$_GET["id"];
+
 mysql_query("update xinwentongzhi set dianjilv=dianjilv+1 where id=$id");
+$sql="select * from xinwentongzhi where id=".$id;
+$query=mysql_query($sql);
 ?>
 <!doctype html>
 <html lang="en">
@@ -28,12 +31,8 @@ mysql_query("update xinwentongzhi set dianjilv=dianjilv+1 where id=$id");
 		<div class="body">
 			<div class="new_Con">
 				<div class="new_title_nav">
-					<?php 
-						$sql="select * from xinwentongzhi where id=".$id;
-						$query=mysql_query($sql);
-					?>
 					<!--新闻文章位置-->
-					<a href="news.php">站内新闻</a>  &gt;  <?php echo mysql_result($query,0,"biaoti"); ?>
+					<a href="news.php?page=news">站内新闻</a>  &gt;  <?php echo mysql_result($query,0,"biaoti"); ?>
 				</div>
 				<?php require_once 'gonggao.php' ?>
 				<div class="new">

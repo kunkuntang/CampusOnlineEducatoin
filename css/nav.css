@@ -48,17 +48,13 @@
 	height: 100%;
 }
 
-.title>.title_left>ul a{
+a{
 	color: #777777;
 }
 
 .title>.title_left>ul>li a:hover{
 	color: #FFFFFF;
 	cursor: pointer;
-}
-
-.titleActive{
-	color: #FFFFFF;
 }
 
 .title>.title_right{

@@ -69,53 +69,53 @@ EDiaryEditor = {
 		var _toolbarStr = "\
 			<div id='EDiaryEditor'style='width: 621px;'>\
 				<div id='EDiaryEditorToolBar' style='position: relative; width: 621px; height: 69px; background-image: url(images/editor/toolbar_bg.gif);'>\
-					<div id='EDiaryEditorFontFamilyMenu' title='×ÖÌå' style='position: absolute; left: 80px; top: 12px; width: 92px; height: 18px; line-height: 20px; padding-left: 4px; cursor: pointer;' action='Family' unselectable='on'>×ÖÌå</div>\
-					<div id='EDiaryEditorFontSizeMenu' title='×ÖºÅ' style='position: absolute; left: 177px; top: 12px; width: 66px; height: 18px; line-height: 20px; padding-left: 4px; cursor: pointer;' action='Size' unselectable='on'>×ÖºÅ</div>\
-					<div id='EDiaryEditorFontStyleMenu' title='¶ÎÂä' style='position: absolute; left: 245px; top: 12px; width: 66px; height: 18px; line-height: 20px; padding-left: 4px; cursor: pointer;' action='Style' unselectable='on'>¶ÎÂä</div>\
+					<div id='EDiaryEditorFontFamilyMenu' title='ï¿½ï¿½ï¿½ï¿½' style='position: absolute; left: 80px; top: 12px; width: 92px; height: 18px; line-height: 20px; padding-left: 4px; cursor: pointer;' action='Family' unselectable='on'>ï¿½ï¿½ï¿½ï¿½</div>\
+					<div id='EDiaryEditorFontSizeMenu' title='ï¿½Öºï¿½' style='position: absolute; left: 177px; top: 12px; width: 66px; height: 18px; line-height: 20px; padding-left: 4px; cursor: pointer;' action='Size' unselectable='on'>ï¿½Öºï¿½</div>\
+					<div id='EDiaryEditorFontStyleMenu' title='ï¿½ï¿½ï¿½ï¿½' style='position: absolute; left: 245px; top: 12px; width: 66px; height: 18px; line-height: 20px; padding-left: 4px; cursor: pointer;' action='Style' unselectable='on'>ï¿½ï¿½ï¿½ï¿½</div>\
 				</div>\
 				<div style='width: 621px; height: 25px; background-image: url(images/editor/title_bg.gif);'>\
 				</div>\
 				<div style='height: 300px; background-image: url(images/editor/guage.gif); padding-left: 39px; width: 582px!important ; width: 621px;' id='EDiaryEditorContent'>\
-					<iframe id='editor_body_area' name='editor_body_area' style='width: 550px; height: 300px; border-width: 0px; overflow-x: atuo; display: nones;' frameborder='0'></iframe>\
-					<textarea id='editor_body_textarea' name='editor_body' style='width: 548px; height: 302px; border-width: 0px; padding-top:8px; display: none;'></textarea>\
+					<iframe id='editor_body_area' name='editor_body_area' style='width: 550px; height: 300px; border-width: 0px; overflow-x: atuo; display: none;' frameborder='0'></iframe>\
+					<textarea id='editor_body_textarea' name='editor_body' style='width: 548px; height: 302px; border-width: 0px; padding-top:8px; display: nones;'></textarea>\
 					<input type='hidden' name='char_count' value='-1' id='EDiaryEditorStrLen'>\
 				</div>\
 				<div style='width: 621px; height: 59px; background-image: url(images/editor/editor_foot.gif)'>\
-					<div style='float: left; padding-top: 18px; margin-left: 18px; margin-top: 16px;'><input type='checkbox' id='ModeCheck'><label for='ModeCheck'>ÏÔÊ¾Ô´´úÂë</label></div>\
+					<div style='float: left; padding-top: 18px; margin-left: 18px; margin-top: 16px;'><input type='checkbox' id='ModeCheck'><label for='ModeCheck'>ï¿½ï¿½Ê¾Ô´ï¿½ï¿½ï¿½ï¿½</label></div>\
 				</div>\
 			</div>\
 		";
 		this.addHTML($(sParentID), _toolbarStr);
 
 		var _toolBarInfo = [
-			{l: 11, t: 12, w: 35, h: 51, a: "Õ³Ìù", n: "paste"},
-			{l: 46, t: 12, w: 21, h: 24, a: "¼ôÇÐ", n: "cut"},
-			{l: 46, t: 36, w: 21, h: 27, a: "¸´ÖÆ", n: "copy"},
-			{l: 77, t: 41, w: 23, h: 23, a: "³·Ïú", n: "undo"},
-			{l: 102, t: 41, w: 23, h: 23, a: "ÖØ×ö", n: "redo"},
-			{l: 133, t: 41, w: 23, h: 23, a: "´ÖÌå", n: "bold"},
-			{l: 158, t: 41, w: 24, h: 23, a: "Ð±Ìå", n: "italic"},
-			{l: 184, t: 41, w: 24, h: 23, a: "ÏÂ»®Ïß", n: "underline"},
-			{l: 210, t: 41, w: 24, h: 23, a: "ÎÄ×ÖÑÕÉ«", n: "forecolor", c: "FColor"},
-			{l: 236, t: 41, w: 24, h: 23, a: "±³¾°ÑÕÉ«", n: "hilitecolor", c: "HColor"},
-			{l: 262, t: 41, w: 24, h: 23, a: "ºáÏß", n: "inserthorizontalrule"},
-			{l: 288, t: 41, w: 24, h: 23, a: "²åÈë±íÇé", n: "face", c: "FaceBG"},
-			{l: 320, t: 41, w: 23, h: 23, a: "×ó¶ÔÆë", n: "justifyleft"},
-			{l: 345, t: 41, w: 24, h: 23, a: "¾ÓÖÐ¶ÔÆë", n: "justifycenter"},
-			{l: 371, t: 41, w: 24, h: 23, a: "ÓÒ¶ÔÆë", n: "justifyright"},
-			{l: 397, t: 41, w: 24, h: 23, a: "Á½¶Ë¶ÔÆë", n: "justifyfull"},
-			{l: 429, t: 41, w: 59, h: 23, a: "Í¼Æ¬ÅÅ°æ", n: "justifyformat", c: "Justify"},
-			{l: 320, t: 10, w: 23, h: 23, a: "±àºÅ", n: "insertorderedlist"},
-			{l: 345, t: 10, w: 24, h: 23, a: "ÏîÄ¿·ûºÅ", n: "insertunorderedlist"},
-			{l: 371, t: 10, w: 24, h: 23, a: "¼õÉÙËõ½ø", n: "outdent"},
-			{l: 397, t: 10, w: 24, h: 23, a: "Ôö¼ÓËõ½ø", n: "indent"},
-			{l: 429, t: 10, w: 23, h: 23, a: "²åÈëÍ¼Æ¬", n: "img"},
-			{l: 454, t: 10, w: 24, h: 23, a: "²åÈëÁ´½Ó", n: "link"},
-			{l: 480, t: 10, w: 24, h: 23, a: "²åÈë±í¸ñ", n: "table"},
-			{l: 531, t: 10, w: 24, h: 23, a: "²åÈëËÑË÷", n: "iask"},
-			{l: 506, t: 10, w: 23, h: 23, a: "²åÈëÎÄ±¾¿ò", n: "textarea"},
-			{l: 496, t: 41, w: 59, h: 23, a: "Ô¤ÀÀÎÄÕÂ", n: "view"},
-			{l: 563, t: 10, w: 48, h: 54, a: "¶ÎÂä»¯", n: "ParaFormatting"},
+			{l: 11, t: 12, w: 35, h: 51, a: "Õ³ï¿½ï¿½", n: "paste"},
+			{l: 46, t: 12, w: 21, h: 24, a: "ï¿½ï¿½ï¿½ï¿½", n: "cut"},
+			{l: 46, t: 36, w: 21, h: 27, a: "ï¿½ï¿½ï¿½ï¿½", n: "copy"},
+			{l: 77, t: 41, w: 23, h: 23, a: "ï¿½ï¿½ï¿½ï¿½", n: "undo"},
+			{l: 102, t: 41, w: 23, h: 23, a: "ï¿½ï¿½ï¿½ï¿½", n: "redo"},
+			{l: 133, t: 41, w: 23, h: 23, a: "ï¿½ï¿½ï¿½ï¿½", n: "bold"},
+			{l: 158, t: 41, w: 24, h: 23, a: "Ð±ï¿½ï¿½", n: "italic"},
+			{l: 184, t: 41, w: 24, h: 23, a: "ï¿½Â»ï¿½ï¿½ï¿½", n: "underline"},
+			{l: 210, t: 41, w: 24, h: 23, a: "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É«", n: "forecolor", c: "FColor"},
+			{l: 236, t: 41, w: 24, h: 23, a: "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É«", n: "hilitecolor", c: "HColor"},
+			{l: 262, t: 41, w: 24, h: 23, a: "ï¿½ï¿½ï¿½ï¿½", n: "inserthorizontalrule"},
+			{l: 288, t: 41, w: 24, h: 23, a: "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", n: "face", c: "FaceBG"},
+			{l: 320, t: 41, w: 23, h: 23, a: "ï¿½ï¿½ï¿½ï¿½ï¿½", n: "justifyleft"},
+			{l: 345, t: 41, w: 24, h: 23, a: "ï¿½ï¿½ï¿½Ð¶ï¿½ï¿½ï¿½", n: "justifycenter"},
+			{l: 371, t: 41, w: 24, h: 23, a: "ï¿½Ò¶ï¿½ï¿½ï¿½", n: "justifyright"},
+			{l: 397, t: 41, w: 24, h: 23, a: "ï¿½ï¿½ï¿½Ë¶ï¿½ï¿½ï¿½", n: "justifyfull"},
+			{l: 429, t: 41, w: 59, h: 23, a: "Í¼Æ¬ï¿½Å°ï¿½", n: "justifyformat", c: "Justify"},
+			{l: 320, t: 10, w: 23, h: 23, a: "ï¿½ï¿½ï¿½", n: "insertorderedlist"},
+			{l: 345, t: 10, w: 24, h: 23, a: "ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½", n: "insertunorderedlist"},
+			{l: 371, t: 10, w: 24, h: 23, a: "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", n: "outdent"},
+			{l: 397, t: 10, w: 24, h: 23, a: "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", n: "indent"},
+			{l: 429, t: 10, w: 23, h: 23, a: "ï¿½ï¿½ï¿½ï¿½Í¼Æ¬", n: "img"},
+			{l: 454, t: 10, w: 24, h: 23, a: "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", n: "link"},
+			{l: 480, t: 10, w: 24, h: 23, a: "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", n: "table"},
+			{l: 531, t: 10, w: 24, h: 23, a: "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", n: "iask"},
+			{l: 506, t: 10, w: 23, h: 23, a: "ï¿½ï¿½ï¿½ï¿½ï¿½Ä±ï¿½ï¿½ï¿½", n: "textarea"},
+			{l: 496, t: 41, w: 59, h: 23, a: "Ô¤ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", n: "view"},
+			{l: 563, t: 10, w: 48, h: 54, a: "ï¿½ï¿½ï¿½ä»¯", n: "ParaFormatting"},
 		];
 		_this.config.toolbarinfo = _toolBarInfo;
 		var _toolbarStr2 = new String;
@@ -126,11 +126,11 @@ EDiaryEditor = {
 		
 		var _toolMenuInfo = {
 			Family: [
-				{t: "ËÎÌå"},
-				{t: "ºÚÌå"},
-				{t: "Á¥Êé"},
-				{t: "¿¬Ìå"},
-				{t: "Ó×Ô²"},
+				{t: "ï¿½ï¿½ï¿½ï¿½"},
+				{t: "ï¿½ï¿½ï¿½ï¿½"},
+				{t: "ï¿½ï¿½ï¿½ï¿½"},
+				{t: "ï¿½ï¿½ï¿½ï¿½"},
+				{t: "ï¿½ï¿½Ô²"},
 				{t: "Arial"},
 				{t: "Impact"},
 				{t: "Georgia"},
@@ -139,25 +139,25 @@ EDiaryEditor = {
 				{t: "Times New Roman"}
 			],
 			Size: [
-		    	{t: "10px",n:"(ÁùºÅ)"},
-				{t: "12px",n:"(Ð¡Îå)"},
-				{t: "14px",n:"(ÎåºÅ)"},
-				{t: "16px",n:"(Ð¡ËÄ)"},
+		    	{t: "10px",n:"(ï¿½ï¿½ï¿½)"},
+				{t: "12px",n:"(Ð¡ï¿½ï¿½)"},
+				{t: "14px",n:"(ï¿½ï¿½ï¿½)"},
+				{t: "16px",n:"(Ð¡ï¿½ï¿½)"},
 				{t: "18px",n:""},
-				{t: "20px",n:"(Ð¡Èý)"},
+				{t: "20px",n:"(Ð¡ï¿½ï¿½)"},
 				{t: "22px",n:""},
-				{t: "24px",n:"(Ð¡¶þ)"},
+				{t: "24px",n:"(Ð¡ï¿½ï¿½)"},
 				{t: "32px",n:"(Ð¡Ò»)"},
-				{t: "56px",n:"(³õºÅ)"}
+				{t: "56px",n:"(ï¿½ï¿½ï¿½ï¿½)"}
 			],
 			Style: [
-                {t: "div",n:"È¡Ïû¶ÎÂä", s: "14"},     
-                {t: "H1",n:"¶ÎÂä1", s: "32"},
-				{t: "H2",n:"¶ÎÂä2", s: "24"},
-				{t: "H3",n:"¶ÎÂä3", s: "18"},
-				{t: "H4",n:"¶ÎÂä4", s: "16"},
-				{t: "H5",n:"¶ÎÂä5", s: "12"},
-				{t: "H6",n:"¶ÎÂä6", s: "10"}
+                {t: "div",n:"È¡ï¿½ï¿½ï¿½ï¿½ï¿½", s: "14"},     
+                {t: "H1",n:"ï¿½ï¿½ï¿½ï¿½1", s: "32"},
+				{t: "H2",n:"ï¿½ï¿½ï¿½ï¿½2", s: "24"},
+				{t: "H3",n:"ï¿½ï¿½ï¿½ï¿½3", s: "18"},
+				{t: "H4",n:"ï¿½ï¿½ï¿½ï¿½4", s: "16"},
+				{t: "H5",n:"ï¿½ï¿½ï¿½ï¿½5", s: "12"},
+				{t: "H6",n:"ï¿½ï¿½ï¿½ï¿½6", s: "10"}
 			]
 		};
 
@@ -172,7 +172,7 @@ EDiaryEditor = {
 						_toolbarStr3 += "\
 							<!-- Font Family Menu -->\
 							<div style='cursor: default; position: absolute; width: 163px; top: 32px; left: 78px; display: none;' id='EDiaryEditorFontFamilyItem'>\
-								<div style='text-align: center; height: 20px; background-image: url(images/editor/menu_title.gif); padding-top: 6px; padding-left: 6px;'><b>×ÖÌå</b></div>\
+								<div style='text-align: center; height: 20px; background-image: url(images/editor/menu_title.gif); padding-top: 6px; padding-left: 6px;'><b>ï¿½ï¿½ï¿½ï¿½</b></div>\
 									<div style=' height: 296px!important ;height: 290px; background-image: url(images/editor/menu_bg.gif);' id='EDiaryEditorFontFamilyBox'>\
 						";
 					}
@@ -195,7 +195,7 @@ EDiaryEditor = {
 						_toolbarStr3 += "\
 							<!-- Font Size Menu -->\
 							<div style='cursor: default; position: absolute; width: 163px; top: 32px; left: 175px; display: none;' id='EDiaryEditorFontSizeItem'>\
-								<div style='text-align: center; height: 20px; background-image: url(images/editor/menu_title.gif); padding-top: 6px; padding-left: 6px;'><b>×ÖºÅ</b></div>\
+								<div style='text-align: center; height: 20px; background-image: url(images/editor/menu_title.gif); padding-top: 6px; padding-left: 6px;'><b>ï¿½Öºï¿½</b></div>\
 									<div style='height: 388px!important ;height: 306px; background-image: url(images/editor/menu_bg.gif);' id='EDiaryEditorFontSizeBox'>\
 						";
 					}
@@ -216,7 +216,7 @@ EDiaryEditor = {
 						_toolbarStr3 += "\
 							<!-- Font Style Menu -->\
 							<div style='cursor: default; position: absolute; width: 163px; top: 32px; left: 243px; display: none;' id='EDiaryEditorFontStyleItem'>\
-								<div style='text-align: center; height: 20px; background-image: url(images/editor/menu_title.gif); padding-top: 6px; padding-left: 6px;'><b>¶ÎÂä</b></div>\
+								<div style='text-align: center; height: 20px; background-image: url(images/editor/menu_title.gif); padding-top: 6px; padding-left: 6px;'><b>ï¿½ï¿½ï¿½ï¿½</b></div>\
 									<div style='height: 231px!important ;height: 187px; background-image: url(images/editor/menu_bg.gif);' id='EDiaryEditorFontStyleBox'>\
 						";
 					}
@@ -323,7 +323,7 @@ EDiaryEditor = {
 
 		this.addHTML($("EDiaryEditorToolBar"), _toolbarStr9);	
 
-		var _toolbarStr9 = "<div style='position: absolute; left: 483px; top: 41px; display: none;' id='EDiaryEditorRsave' title='»Ö¸´ÉÏÒ»´ÎÎ´³É¹¦·¢±íÄÚÈÝ'><img src='images/editor/rsave.gif' csrc='/images/rsave.gif' bsrc='/images/rsave_over.gif' onmouseover='this.src=this.bsrc' onmouseout='this.src=this.csrc'></div>";
+		var _toolbarStr9 = "<div style='position: absolute; left: 483px; top: 41px; display: none;' id='EDiaryEditorRsave' title='ï¿½Ö¸ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Î´ï¿½É¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½'><img src='images/editor/rsave.gif' csrc='/images/rsave.gif' bsrc='/images/rsave_over.gif' onmouseover='this.src=this.bsrc' onmouseout='this.src=this.csrc'></div>";
 		this.addHTML($("EDiaryEditorToolBar"), _toolbarStr9);
 		
 		
@@ -343,7 +343,7 @@ EDiaryEditor = {
 		this.iframe = $("editor_body_area");
 		if(window._isIE) {
 			this.iframe.addBehavior("#default#userData");
-			// »Ö¸´ÎÄÕÂÄÚÈÝ¹¦ÄÜÄ£¿é 
+			// ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý¹ï¿½ï¿½ï¿½Ä£ï¿½ï¿½ 
 			function EDiaryEditorRsave() {
 				try{
 					if(readCookie("EDiaryEditor_RSave") == "false")return;
@@ -351,8 +351,8 @@ EDiaryEditor = {
 					oPersist.load("EDiaryEditorRsave");
 					var oData = oPersist.getAttribute("Edit");
 					if(oData != null && oData != "" && Request("ReadCookie")==1) {
-						if(confirm("ÄúÓÐÒ»ÆªÎ´Íê³ÉµÄÄÚÈÝ£¬ÊÇ·ñÈ·ÈÏ»Ö¸´£¿")) {
-							if(_this.iframe.style.display != "none") {// Éè¼ÆÄ£Ê½
+						if(confirm("ï¿½ï¿½ï¿½ï¿½Ò»ÆªÎ´ï¿½ï¿½Éµï¿½ï¿½ï¿½ï¿½Ý£ï¿½ï¿½Ç·ï¿½È·ï¿½Ï»Ö¸ï¿½ï¿½ï¿½")) {
+							if(_this.iframe.style.display != "none") {// ï¿½ï¿½ï¿½Ä£Ê½
 								_this.iframe.contentWindow.document.body.innerHTML = oData;
 							}
 							else {
@@ -367,7 +367,7 @@ EDiaryEditor = {
 				}catch(e) {};
 			}
 			this.EDiaryEditorRsave = EDiaryEditorRsave;
-			// ³É¹¦£¬É¾³ý±£´æµÄÄÚÈÝ
+			// ï¿½É¹ï¿½ï¿½ï¿½É¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			this.delEditorRsave = function () {
 				writeCookie("EDiaryEditor_RSave", "false", 1);
 				var oPersist = _this.iframe;
@@ -382,13 +382,13 @@ EDiaryEditor = {
 				writeCookie("EDiaryEditor_RUser", "null", 1000);
 				delEditorRsave();
 			}
-			// ¶¨Ê±±£´æÎÄÕÂÕýÎÄÄÚÈÝ
+			// ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			this.iframe.addBehavior("#default#userData");
 			setInterval(function () {
 				if(readCookie("EDiaryEditor_RSave") == "false")return;
 				if(_this.iframe.contentWindow.document.body.innerHTML.length > 5000) return;
 				if(sState != "iframe")return;
-				if(_this.iframe.style.display != "none") {// Éè¼ÆÄ£Ê½
+				if(_this.iframe.style.display != "none") {// ï¿½ï¿½ï¿½Ä£Ê½
 					if(_this.iframe.contentWindow.document.body.innerHTML.toLowerCase() == "<div>&nbsp;</div>") return;
 					if(_this.iframe.contentWindow.document.body.innerHTML.toLowerCase() == "<div></div>") return;
 					if(_this.iframe.contentWindow.document.body.innerHTML.toLowerCase() == "<p>&nbsp;</p>") return;
@@ -397,7 +397,7 @@ EDiaryEditor = {
 					oPersist.setAttribute("Edit",_this.iframe.contentWindow.document.body.innerHTML);
 					oPersist.save("EDiaryEditorRsave");
 				}
-				else {// ´úÂëÄ£Ê½
+				else {// ï¿½ï¿½ï¿½ï¿½Ä£Ê½
 					if($("editor_body_textarea").value.toLowerCase() == "<div>&nbsp;</div>") return;
 					if($("editor_body_textarea").value.toLowerCase() == "<div></div>") return;
 					if($("editor_body_textarea").value.toLowerCase() == "<p>&nbsp;</p>") return;
@@ -441,7 +441,7 @@ EDiaryEditor = {
 							}
 							var sRangeType = _this.getElement();
 							if (sRangeType.tagName.toLowerCase() != "img"){
-								alert('ÇëÑ¡ÖÐÍ¼Æ¬ºó²Ù×÷!')
+								alert('ï¿½ï¿½Ñ¡ï¿½ï¿½Í¼Æ¬ï¿½ï¿½ï¿½ï¿½ï¿½!')
 							return;
 							}
 						}
@@ -518,10 +518,10 @@ EDiaryEditor = {
 		}
 
 		////////////////////////////////////////////////////////////
-		// ÐèÒªÓÅ»¯
+		// ï¿½ï¿½Òªï¿½Å»ï¿½
         function eventObserver(){
             var es =_this.iframe.contentWindow.document.body.keyupEvents;
-				/* ×ÖÌåÔ¤Éè
+				/* ï¿½ï¿½ï¿½ï¿½Ô¤ï¿½ï¿½
                 if(es.fontsize){
                     reaplceFontName("fontsize",es.fontsize)
                 }
@@ -534,8 +534,8 @@ EDiaryEditor = {
             var idocument= _this.iframe.contentWindow.document;
 
             if(window._isIE) {
-				if(v == "¿¬Ìå" && !window._isVista) {
-					v = "¿¬Ìå_GB2312";
+				if(v == "ï¿½ï¿½ï¿½ï¿½" && !window._isVista) {
+					v = "ï¿½ï¿½ï¿½ï¿½_GB2312";
 				}
                 idocument.execCommand("fontname", "", "EDiaryEditor_Temp_FontName");
                  if(!idocument.body.keyupEvents)
@@ -672,7 +672,7 @@ EDiaryEditor = {
 				_this.iframe.contentWindow.document.body.innerHTML = _this.iframe.contentWindow.document.body.innerHTML;
 			}
 			else {
-				alert("ÇëÑ¡ÖÐÍ¼Æ¬ºó²Ù×÷!");
+				alert("ï¿½ï¿½Ñ¡ï¿½ï¿½Í¼Æ¬ï¿½ï¿½ï¿½ï¿½ï¿½!");
 			}
 		}
 		function swapMode(event, Act) {
@@ -779,7 +779,7 @@ EDiaryEditor = {
 			scrollbar-track-color: #f4f4f0;\
 			scrollbar-darkshadow-color: #ebebe4;\
 			word-wrap: break-word;\
-			font-family: 'ËÎÌå', 'Courier New';\
+			font-family: 'ï¿½ï¿½ï¿½ï¿½', 'Courier New';\
 		}\
 		p {\
 			margin: 0px;\
@@ -814,13 +814,13 @@ EDiaryEditor = {
 		_this.iframeWindow = _this.iframe.contentWindow;
 		_this.iframeDocument = _this.iframeWindow.document;
 
-		// ³õÊ¼»¯IFRAMEÖÐµÄÊÂ¼þ 
+		// ï¿½ï¿½Ê¼ï¿½ï¿½IFRAMEï¿½Ðµï¿½ï¿½Â¼ï¿½ 
 		this.iframeEventCore.init(this);
 		_this.iframe.contentWindow.document.onclick = document.onclick = function (event) {
 			event = event || window.event;
 			FontMenuFuncHash.hide(event, FontMenuFuncHash);
 		}
-		// zly, moz ÏÂµã»÷±à¼­ÇøÇå³ý²Ëµ¥ÎÞÐ§, try ½â¾öµ¥´¿ÅÐ¶Ïä¯ÀÀÆ÷ÒýÆðµÄÎó²î¡£
+		// zly, moz ï¿½Âµï¿½ï¿½ï¿½à¼­ï¿½ï¿½ï¿½ï¿½ï¿½Ëµï¿½ï¿½ï¿½Ð§, try ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½î¡£
 		try{
 			_this.iframe.contentWindow.document.addEventListener('click', function (event) {
 				event = event || window.event;
@@ -860,7 +860,7 @@ EDiaryEditor = {
 				if(pasteData && pasteData.length > 0) {
 					var wordPattern = /<\w[^>]* class="?MsoNormal"?/gi;
 					if(wordPattern.test(pasteData)) {
-						if(confirm("ÎÄÕÂÓÐ¶àÓà´úÂë£¬¿ÉÄÜÓ°ÏìË³Àû·¢±í£¬ÊÇ·ñÈ·ÈÏÇå³ý£¿\r\n\r\nÌáÊ¾£ºÄúµÄÎÄ×Ö½«ÍêÕû±£Áô¡£")) {
+						if(confirm("ï¿½ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½ï¿½ï¿½ï¿½ï¿½ë£¬ï¿½ï¿½ï¿½ï¿½Ó°ï¿½ï¿½Ë³ï¿½ï¿½?ï¿½Ç·ï¿½È·ï¿½ï¿½ï¿½ï¿½ï¿½\r\n\r\nï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½")) {
 							pasteData = clearFromWord(pasteData);
 						} 
 						else {	
@@ -957,21 +957,21 @@ EDiaryEditor = {
 			for(var i = 0; i < oChild.length; i++){
 				if(oChild[i].tagName){
 					
-					// È¥µôÊ×Î²¿Õ¸ñ
-					oChild[i].innerHTML	= oChild[i].innerHTML.split('&nbsp;').join('¨¼');
-					oChild[i].innerHTML	= oChild[i].innerHTML.replace(/(^[ |¡¡|¨¼]*)|([ |¡¡|¨¼]*$)/g, "");
-					oChild[i].innerHTML	= oChild[i].innerHTML.split('¨¼').join('&nbsp;');
+					// È¥ï¿½ï¿½ï¿½ï¿½Î²ï¿½Õ¸ï¿½
+					oChild[i].innerHTML	= oChild[i].innerHTML.split('&nbsp;').join('ï¿½ï¿½');
+					oChild[i].innerHTML	= oChild[i].innerHTML.replace(/(^[ |ï¿½ï¿½|ï¿½ï¿½]*)|([ |ï¿½ï¿½|ï¿½ï¿½]*$)/g, "");
+					oChild[i].innerHTML	= oChild[i].innerHTML.split('ï¿½ï¿½').join('&nbsp;');
 					
-					// ÊÇ·ñÒÑ¾­ÅÅ¹ý°æ,Ê¹ÓÃ 2em »áÊ¹¶ÎÂäÅÅ°æ»ìÂÒ£Ûh1,h2»ì£Ý,¿ÉÉè¼ÆÄ¬ÈÏ 28 ÏñËØ¡£Í¨¹ý¼ÆËã×Ó½Úµã fontSize ·½Ê½Í¬ÑùÓÐ´ËÎÊÌâ
+					// ï¿½Ç·ï¿½ï¿½Ñ¾ï¿½ï¿½Å¹ï¿½ï¿½,Ê¹ï¿½ï¿½ 2em ï¿½ï¿½Ê¹ï¿½ï¿½ï¿½ï¿½ï¿½Å°ï¿½ï¿½ï¿½Ò£ï¿½h1,h2ï¿½ï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½ï¿½Ä¬ï¿½ï¿½ 28 ï¿½ï¿½ï¿½Ø¡ï¿½Í¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó½Úµï¿½ fontSize ï¿½ï¿½Ê½Í¬ï¿½ï¿½ï¿½Ð´ï¿½ï¿½ï¿½ï¿½ï¿½
 					if(!oChild[i].style.textIndent){
 						oChild[i].style.textIndent	= '2em';
-					// Ä¬ÈÏÅÅ°æÇ°
+					// Ä¬ï¿½ï¿½ï¿½Å°ï¿½Ç°
 					}else{
 						oChild[i].style.textIndent	= '';
 					}
-				// ´¿ÎÄ±¾
+				// ï¿½ï¿½ï¿½Ä±ï¿½
 				}else{
-					oBody.innerHTML = '<div style="text-indent:2em;">' + oBody.innerHTML.replace(/(^[ |¡¡]*)|([ |¡¡]*$)/g, ""); + '</div>';
+					oBody.innerHTML = '<div style="text-indent:2em;">' + oBody.innerHTML.replace(/(^[ |ï¿½ï¿½]*)|([ |ï¿½ï¿½]*$)/g, ""); + '</div>';
 				}
 			}
 		}
@@ -1013,12 +1013,12 @@ EDiaryEditor = {
 					catch(e){}
 				}
 				else {
-					alert("ÇëÑ¡ÔñÒ»¶ÎÎÄ×Öºó²Ù×÷!");
+					alert("ï¿½ï¿½Ñ¡ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Öºï¿½ï¿½ï¿½ï¿½!");
 				}
 			}
 			else {
 				if(rng.text == "") {
-					alert("ÇëÑ¡ÔñÒ»¶ÎÎÄ×Öºó²Ù×÷!");
+					alert("ï¿½ï¿½Ñ¡ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Öºï¿½ï¿½ï¿½ï¿½!");
 				}
 				else {
 					_this.iframe.contentWindow.document.execCommand("insertHTML", false, html);
@@ -1038,7 +1038,7 @@ EDiaryEditor = {
 				_this.iframe.contentWindow.document.body.innerHTML = str;
 			}
 			else {
-				alert("´Ë¹¦ÄÜÔÝÊ±²»Ö§³ÖÄúÏÖÔÚµÄä¯ÀÀÆ÷£¬ÇëÊ¹ÓÃIEä¯ÀÀ");
+				alert("ï¿½Ë¹ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½Ö§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½IEï¿½ï¿½ï¿½");
 			}
 		}
 		else if(CMD == "textarea") {
@@ -1056,7 +1056,7 @@ EDiaryEditor = {
 				rng = selection.getRangeAt(selection.rangeCount - 1).cloneRange();
 				rng.text = rng.toString();
 			}
-			_sVal = rng.text == "" ? "ÇëÔÚÎÄ±¾¿òÊäÈëÎÄ×Ö" : rng.text;
+			_sVal = rng.text == "" ? "ï¿½ï¿½ï¿½ï¿½ï¿½Ä±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½" : rng.text;
 			var html = "<table style='border:1px solid #999;width:80%;font-size:12px;' align='center'><tr><td>"+ _sVal +"</td></tr></table>";
 		
 			frameWin.focus();
@@ -1083,7 +1083,7 @@ EDiaryEditor = {
 				this.iframe.contentWindow.focus();
 			}
 			else {
-				alert("¸Ãä¯ÀÀÆ÷²»Ö§³Ö±¾¹¦ÄÜ");
+				alert("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö§ï¿½Ö±ï¿½ï¿½ï¿½ï¿½ï¿½");
 			}
 		}
 		else {
@@ -1126,7 +1126,7 @@ EDiaryEditor = {
 };
 
 
-function Request(name) {//»ñÈ¡Ò³ÃæID²ÎÊý
+function Request(name) {//ï¿½ï¿½È¡Ò³ï¿½ï¿½IDï¿½ï¿½ï¿½ï¿½
 var reg = new RegExp("(^|\\?|&)"+ name +"=([^&]*)(\\s|&|$)", "i");
 if (reg.test(location.href))
 return unescape(RegExp.$2.replace(/\+/g, " "));

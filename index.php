@@ -9,6 +9,7 @@ include_once 'conn.php';
 	<link rel="stylesheet" href="css/reset.css" />
 	<link rel="stylesheet" href="css/index.css" />
 	<link rel="stylesheet" type="text/css" href="css/login.css"/>
+	<link rel="stylesheet" type="text/css" href="css/animate.css"/>
 	<script src="js/jquery-1.11.3.min.js"></script>
 	<script src="js/login.js" type="text/javascript"></script>
 </head>
@@ -18,12 +19,12 @@ include_once 'conn.php';
 			<div class="title_left">
 				<span class="logo"></span>
 				<ul>
-					<li class="titleActive"><a href="index.php">首页</a></li>
-					<li><a href="news.php?lb=站内新闻">新闻</a></li>
-					<li><a href="video.php">视频</a></li>
-					<li><a href="classFileList.php">课件</a></li>
-					<li><a href="news.php?lb=教学大纲">大纲</a></li>
-					<li><a href="live.php">直播</a></li>
+					<li><a href="index.php" class="titleActive">首页</a></li>
+					<li><a href="news.php?lb=站内新闻&page=newsSide" <?php if($page == 'newsSide'){echo 'class="titleActive"';}?>>新闻</a></li>
+					<li><a href="video.php?page=vedio" <?php if($page == 'vedio'){echo 'class="titleActive"';}?>>视频</a></li>
+					<li><a href="classFileList.php?page=cFileList" <?php if($page == 'cFileList'){echo 'class="titleActive"';}?>>课件</a></li>
+					<li><a href="news.php?lb=教学大纲&page=teachLine" <?php if($page == 'teachLine'){echo 'class="titleActive"';}?>>大纲</a></li>
+					<li><a href="live.php?page=live" <?php if($page == 'live'){echo 'class="titleActive"';}?>>直播</a></li>
 				</ul>
 			</div>
 			<div class="title_right">
@@ -75,19 +76,14 @@ include_once 'conn.php';
 		<div class="new new_01" style="background-image: url(<?php echo mysql_result($query, 0, "shouyetupian"); ?>);"><div class="newCon"><?php echo mysql_result($query, 0, "biaoti"); ?></div></div>
 		<div class="new new_02" style="background-image: url(<?php echo mysql_result($query, 1, "shouyetupian"); ?>"><div class="newCon"><?php echo mysql_result($query, 1, "biaoti"); ?></div></div>
 		<div class="new new_03" style="background-image: url(<?php echo mysql_result($query, 2, "shouyetupian"); ?>"><div class="newCon"><?php echo mysql_result($query, 2, "biaoti"); ?></div></div>
-		<!--
-		<div class="new_01"></div>
-		<div class="new_02"></div>
-		<div class="new_03"></div>
-		-->
-		<div class="section1Btn moreBtn">查看更多&gt;&gt;</div>
+		<div class="section1Btn moreBtn"><a href="news.php">查看更多&gt;&gt;</a></div>
 	</div>
 	<div class="section2">
 		<div class="tecTitle">
 			<p class="tec_title1">教师风采</p>
 			<p class="tec_title2">也许有那么一个人可以点亮你夜行的路</p>
 		</div>
-		<div class="tecsPicCon">
+		<div class="tecsPicCon" id="tecsPicCon">
 			<?php 
     			$sql="select * from jiaoshixinxi where zhaopian<>'' order by id desc limit 4";
 				$query=mysql_query($sql);
@@ -105,11 +101,11 @@ include_once 'conn.php';
 				}
   			?>
 		</div>
-		<div class="section2Btn moreBtn">查看更多&gt;&gt;</div>
+		<div class="section2Btn moreBtn" id="moreBtn"><a href="teachersShow.php">查看更多&gt;&gt;</a></div>
 	</div>
 	<div class="section3">
-		<img class="laptop" src="img/section3Bg.png" />
-		<div class="section3_detail">
+		<img class="laptop" src="img/section3Bg.png" id="laptop" />
+		<div class="section3_detail" id="section3_detail">
 			<p>系统简介</p>
 			<span>随着网络的发展，互联网已经走入了我国大部分人的生活。但是现代教育太过形式化，许多学生学不到自己想学的东西，还有一些人根本没有走入课堂的机会。</br>
 本站可以解决大部分学生的问题，一切资源免费对大家开发，提供不同科目的不同资料，使有知识的人可以把知识传给别人，想学知识的人可以在这里学到知识，让师生有一个交流的平台。
@@ -133,7 +129,7 @@ include_once 'conn.php';
 			</div>
 			<div>
 				<span>
-					后台留言
+					<a href="message.php">后台留言</a>
 				</span>
 				<ul>
 					<li></li>
@@ -155,7 +151,7 @@ include_once 'conn.php';
 					<li></li>
 				</ul>
 			</div>
-			<p class="copyright">Copyright &copy;2016G-Try</p>
+			<p class="copyright">Copyright &copy;2016&nbsp;G-Try</p>
 		</div>
 	</div>
 	<script type="text/javascript">
@@ -164,7 +160,6 @@ include_once 'conn.php';
 			$(this).css({'opacity': 1})
 		});
 		
-		console.log($(window).scrollTop());
 		$(window).scroll(function(){
 			if($(window).scrollTop() > 70){
 				$('.title').css({'backgroundColor': '#262334','height': 70, 'lineHeight': '70px'});
@@ -172,6 +167,18 @@ include_once 'conn.php';
 			}else if($(window).scrollTop() < 70){
 				$('.title').css({'backgroundColor': '','height': 60,'lineHeight': '60px'});
 				$('.userLogo').css({'height': 60});
+			}
+			
+			if($(window).scrollTop() >= 1000){
+				$('#tecsPicCon').attr('class','tecsPicCon fadeInUp animated');
+				setTimeout(function(){
+					$('#moreBtn').attr('class','section2Btn moreBtn fadeIn animated');
+				},1000);
+			}
+			
+			if($(window).scrollTop() >= 1800){
+				$('#laptop').attr('class','laptop fadeInLeft animated');
+				$('#section3_detail').attr('class','section3_detail fadeInRight animated');
 			}
 		});
 		

@@ -2,12 +2,13 @@
 			<div class="title_left">
 				<span class="logo"></span>
 				<ul>
-					<li class="titleActive"><a href="index.php">首页</a></li>
-					<li><a href="news.php?lb=站内新闻">新闻</a></li>
-					<li><a href="video.php">视频</a></li>
-					<li><a href="classFileList.php">课件</a></li>
-					<li><a href="news.php?lb=教学大纲">大纲</a></li>
-					<li><a href="live.php">直播</a></li>
+					<?php $page=$_GET["page"]; ?>
+					<li><a href="index.php">首页</a></li>
+					<li><a href="news.php?lb=站内新闻&page=newsSide" <?php if($page == 'newsSide'){echo 'class="titleActive"';}?>>新闻</a></li>
+					<li><a href="video.php?page=vedio" <?php if($page == 'vedio'){echo 'class="titleActive"';}?>>视频</a></li>
+					<li><a href="classFileList.php?page=cFileList" <?php if($page == 'cFileList'){echo 'class="titleActive"';}?>>课件</a></li>
+					<li><a href="news.php?lb=教学大纲&page=teachLine" <?php if($page == 'teachLine'){echo 'class="titleActive"';}?>>大纲</a></li>
+					<li><a href="live.php?page=live" <?php if($page == 'live'){echo 'class="titleActive"';}?>>直播</a></li>
 				</ul>
 			</div>
 			<div class="title_right">

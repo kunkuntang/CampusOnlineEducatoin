@@ -69,53 +69,53 @@ EDiaryEditor = {
 		var _toolbarStr = "\
 			<div id='EDiaryEditor'style='width: 621px;'>\
 				<div id='EDiaryEditorToolBar' style='position: relative; width: 621px; height: 69px; background-image: url(images/editor/toolbar_bg.gif);'>\
-					<div id='EDiaryEditorFontFamilyMenu' title='字体' style='position: absolute; left: 80px; top: 12px; width: 92px; height: 18px; line-height: 20px; padding-left: 4px; cursor: pointer;' action='Family' unselectable='on'>字体</div>\
-					<div id='EDiaryEditorFontSizeMenu' title='字号' style='position: absolute; left: 177px; top: 12px; width: 66px; height: 18px; line-height: 20px; padding-left: 4px; cursor: pointer;' action='Size' unselectable='on'>字号</div>\
-					<div id='EDiaryEditorFontStyleMenu' title='段落' style='position: absolute; left: 245px; top: 12px; width: 66px; height: 18px; line-height: 20px; padding-left: 4px; cursor: pointer;' action='Style' unselectable='on'>段落</div>\
+					<div id='EDiaryEditorFontFamilyMenu' title='×ÖÌå' style='position: absolute; left: 80px; top: 12px; width: 92px; height: 18px; line-height: 20px; padding-left: 4px; cursor: pointer;' action='Family' unselectable='on'>×ÖÌå</div>\
+					<div id='EDiaryEditorFontSizeMenu' title='×ÖºÅ' style='position: absolute; left: 177px; top: 12px; width: 66px; height: 18px; line-height: 20px; padding-left: 4px; cursor: pointer;' action='Size' unselectable='on'>×ÖºÅ</div>\
+					<div id='EDiaryEditorFontStyleMenu' title='¶ÎÂä' style='position: absolute; left: 245px; top: 12px; width: 66px; height: 18px; line-height: 20px; padding-left: 4px; cursor: pointer;' action='Style' unselectable='on'>¶ÎÂä</div>\
 				</div>\
 				<div style='width: 621px; height: 25px; background-image: url(images/editor/title_bg.gif);'>\
 				</div>\
 				<div style='height: 300px; background-image: url(images/editor/guage.gif); padding-left: 39px; width: 582px!important ; width: 621px;' id='EDiaryEditorContent'>\
-					<iframe id='editor_body_area' name='editor_body_area' style='width: 550px; height: 300px; border-width: 0px; overflow-x: atuo; display: nones;' frameborder='0'></iframe>\
+					<iframe id='editor_body_area' name='editor_body_area' style='width: 550px; height: 300px; border-width: 0px; overflow-x: atuo; display: none;' frameborder='0'></iframe>\
 					<textarea id='editor_body_textarea' name='editor_body' style='width: 548px; height: 302px; border-width: 0px; padding-top:8px; display: none;'></textarea>\
 					<input type='hidden' name='char_count' value='-1' id='EDiaryEditorStrLen'>\
 				</div>\
 				<div style='width: 621px; height: 59px; background-image: url(images/editor/editor_foot.gif)'>\
-					<div style='float: left; padding-top: 18px; margin-left: 18px; margin-top: 16px;'><input type='checkbox' id='ModeCheck'><label for='ModeCheck'>显示源代码</label></div>\
+					<div style='float: left; padding-top: 18px; margin-left: 18px; margin-top: 16px;'><input type='checkbox' id='ModeCheck'><label for='ModeCheck'>ÏÔÊ¾Ô´´úÂë</label></div>\
 				</div>\
 			</div>\
 		";
 		this.addHTML($(sParentID), _toolbarStr);
 
 		var _toolBarInfo = [
-			{l: 11, t: 12, w: 35, h: 51, a: "粘贴", n: "paste"},
-			{l: 46, t: 12, w: 21, h: 24, a: "剪切", n: "cut"},
-			{l: 46, t: 36, w: 21, h: 27, a: "复制", n: "copy"},
-			{l: 77, t: 41, w: 23, h: 23, a: "撤销", n: "undo"},
-			{l: 102, t: 41, w: 23, h: 23, a: "重做", n: "redo"},
-			{l: 133, t: 41, w: 23, h: 23, a: "粗体", n: "bold"},
-			{l: 158, t: 41, w: 24, h: 23, a: "斜体", n: "italic"},
-			{l: 184, t: 41, w: 24, h: 23, a: "下划线", n: "underline"},
-			{l: 210, t: 41, w: 24, h: 23, a: "文字颜色", n: "forecolor", c: "FColor"},
-			{l: 236, t: 41, w: 24, h: 23, a: "背景颜色", n: "hilitecolor", c: "HColor"},
-			{l: 262, t: 41, w: 24, h: 23, a: "横线", n: "inserthorizontalrule"},
-			{l: 288, t: 41, w: 24, h: 23, a: "插入表情", n: "face", c: "FaceBG"},
-			{l: 320, t: 41, w: 23, h: 23, a: "左对齐", n: "justifyleft"},
-			{l: 345, t: 41, w: 24, h: 23, a: "居中对齐", n: "justifycenter"},
-			{l: 371, t: 41, w: 24, h: 23, a: "右对齐", n: "justifyright"},
-			{l: 397, t: 41, w: 24, h: 23, a: "两端对齐", n: "justifyfull"},
-			{l: 429, t: 41, w: 59, h: 23, a: "图片排版", n: "justifyformat", c: "Justify"},
-			{l: 320, t: 10, w: 23, h: 23, a: "编号", n: "insertorderedlist"},
-			{l: 345, t: 10, w: 24, h: 23, a: "项目符号", n: "insertunorderedlist"},
-			{l: 371, t: 10, w: 24, h: 23, a: "减少缩进", n: "outdent"},
-			{l: 397, t: 10, w: 24, h: 23, a: "增加缩进", n: "indent"},
-			{l: 429, t: 10, w: 23, h: 23, a: "插入图片", n: "img"},
-			{l: 454, t: 10, w: 24, h: 23, a: "插入链接", n: "link"},
-			{l: 480, t: 10, w: 24, h: 23, a: "插入表格", n: "table"},
-			{l: 531, t: 10, w: 24, h: 23, a: "插入搜索", n: "iask"},
-			{l: 506, t: 10, w: 23, h: 23, a: "插入文本框", n: "textarea"},
-			{l: 496, t: 41, w: 59, h: 23, a: "预览文章", n: "view"},
-			{l: 563, t: 10, w: 48, h: 54, a: "段落化", n: "ParaFormatting"},
+			{l: 11, t: 12, w: 35, h: 51, a: "Õ³Ìù", n: "paste"},
+			{l: 46, t: 12, w: 21, h: 24, a: "¼ôÇÐ", n: "cut"},
+			{l: 46, t: 36, w: 21, h: 27, a: "¸´ÖÆ", n: "copy"},
+			{l: 77, t: 41, w: 23, h: 23, a: "³·Ïú", n: "undo"},
+			{l: 102, t: 41, w: 23, h: 23, a: "ÖØ×ö", n: "redo"},
+			{l: 133, t: 41, w: 23, h: 23, a: "´ÖÌå", n: "bold"},
+			{l: 158, t: 41, w: 24, h: 23, a: "Ð±Ìå", n: "italic"},
+			{l: 184, t: 41, w: 24, h: 23, a: "ÏÂ»®Ïß", n: "underline"},
+			{l: 210, t: 41, w: 24, h: 23, a: "ÎÄ×ÖÑÕÉ«", n: "forecolor", c: "FColor"},
+			{l: 236, t: 41, w: 24, h: 23, a: "±³¾°ÑÕÉ«", n: "hilitecolor", c: "HColor"},
+			{l: 262, t: 41, w: 24, h: 23, a: "ºáÏß", n: "inserthorizontalrule"},
+			{l: 288, t: 41, w: 24, h: 23, a: "²åÈë±íÇé", n: "face", c: "FaceBG"},
+			{l: 320, t: 41, w: 23, h: 23, a: "×ó¶ÔÆë", n: "justifyleft"},
+			{l: 345, t: 41, w: 24, h: 23, a: "¾ÓÖÐ¶ÔÆë", n: "justifycenter"},
+			{l: 371, t: 41, w: 24, h: 23, a: "ÓÒ¶ÔÆë", n: "justifyright"},
+			{l: 397, t: 41, w: 24, h: 23, a: "Á½¶Ë¶ÔÆë", n: "justifyfull"},
+			{l: 429, t: 41, w: 59, h: 23, a: "Í¼Æ¬ÅÅ°æ", n: "justifyformat", c: "Justify"},
+			{l: 320, t: 10, w: 23, h: 23, a: "±àºÅ", n: "insertorderedlist"},
+			{l: 345, t: 10, w: 24, h: 23, a: "ÏîÄ¿·ûºÅ", n: "insertunorderedlist"},
+			{l: 371, t: 10, w: 24, h: 23, a: "¼õÉÙËõ½ø", n: "outdent"},
+			{l: 397, t: 10, w: 24, h: 23, a: "Ôö¼ÓËõ½ø", n: "indent"},
+			{l: 429, t: 10, w: 23, h: 23, a: "²åÈëÍ¼Æ¬", n: "img"},
+			{l: 454, t: 10, w: 24, h: 23, a: "²åÈëÁ´½Ó", n: "link"},
+			{l: 480, t: 10, w: 24, h: 23, a: "²åÈë±í¸ñ", n: "table"},
+			{l: 531, t: 10, w: 24, h: 23, a: "²åÈëËÑË÷", n: "iask"},
+			{l: 506, t: 10, w: 23, h: 23, a: "²åÈëÎÄ±¾¿ò", n: "textarea"},
+			{l: 496, t: 41, w: 59, h: 23, a: "Ô¤ÀÀÎÄÕÂ", n: "view"},
+			{l: 563, t: 10, w: 48, h: 54, a: "¶ÎÂä»¯", n: "ParaFormatting"},
 		];
 		_this.config.toolbarinfo = _toolBarInfo;
 		var _toolbarStr2 = new String;
@@ -126,11 +126,11 @@ EDiaryEditor = {
 		
 		var _toolMenuInfo = {
 			Family: [
-				{t: "宋体"},
-				{t: "黑体"},
-				{t: "隶书"},
-				{t: "楷体"},
-				{t: "幼圆"},
+				{t: "ËÎÌå"},
+				{t: "ºÚÌå"},
+				{t: "Á¥Êé"},
+				{t: "¿¬Ìå"},
+				{t: "Ó×Ô²"},
 				{t: "Arial"},
 				{t: "Impact"},
 				{t: "Georgia"},
@@ -139,25 +139,25 @@ EDiaryEditor = {
 				{t: "Times New Roman"}
 			],
 			Size: [
-		    	{t: "10px",n:"(六号)"},
-				{t: "12px",n:"(小五)"},
-				{t: "14px",n:"(五号)"},
-				{t: "16px",n:"(小四)"},
+		    	{t: "10px",n:"(ÁùºÅ)"},
+				{t: "12px",n:"(Ð¡Îå)"},
+				{t: "14px",n:"(ÎåºÅ)"},
+				{t: "16px",n:"(Ð¡ËÄ)"},
 				{t: "18px",n:""},
-				{t: "20px",n:"(小三)"},
+				{t: "20px",n:"(Ð¡Èý)"},
 				{t: "22px",n:""},
-				{t: "24px",n:"(小二)"},
-				{t: "32px",n:"(小一)"},
-				{t: "56px",n:"(初号)"}
+				{t: "24px",n:"(Ð¡¶þ)"},
+				{t: "32px",n:"(Ð¡Ò»)"},
+				{t: "56px",n:"(³õºÅ)"}
 			],
 			Style: [
-                {t: "div",n:"取消段落", s: "14"},     
-                {t: "H1",n:"段落1", s: "32"},
-				{t: "H2",n:"段落2", s: "24"},
-				{t: "H3",n:"段落3", s: "18"},
-				{t: "H4",n:"段落4", s: "16"},
-				{t: "H5",n:"段落5", s: "12"},
-				{t: "H6",n:"段落6", s: "10"}
+                {t: "div",n:"È¡Ïû¶ÎÂä", s: "14"},     
+                {t: "H1",n:"¶ÎÂä1", s: "32"},
+				{t: "H2",n:"¶ÎÂä2", s: "24"},
+				{t: "H3",n:"¶ÎÂä3", s: "18"},
+				{t: "H4",n:"¶ÎÂä4", s: "16"},
+				{t: "H5",n:"¶ÎÂä5", s: "12"},
+				{t: "H6",n:"¶ÎÂä6", s: "10"}
 			]
 		};
 
@@ -172,7 +172,7 @@ EDiaryEditor = {
 						_toolbarStr3 += "\
 							<!-- Font Family Menu -->\
 							<div style='cursor: default; position: absolute; width: 163px; top: 32px; left: 78px; display: none;' id='EDiaryEditorFontFamilyItem'>\
-								<div style='text-align: center; height: 20px; background-image: url(images/editor/menu_title.gif); padding-top: 6px; padding-left: 6px;'><b>字体</b></div>\
+								<div style='text-align: center; height: 20px; background-image: url(images/editor/menu_title.gif); padding-top: 6px; padding-left: 6px;'><b>×ÖÌå</b></div>\
 									<div style=' height: 296px!important ;height: 290px; background-image: url(images/editor/menu_bg.gif);' id='EDiaryEditorFontFamilyBox'>\
 						";
 					}
@@ -195,7 +195,7 @@ EDiaryEditor = {
 						_toolbarStr3 += "\
 							<!-- Font Size Menu -->\
 							<div style='cursor: default; position: absolute; width: 163px; top: 32px; left: 175px; display: none;' id='EDiaryEditorFontSizeItem'>\
-								<div style='text-align: center; height: 20px; background-image: url(images/editor/menu_title.gif); padding-top: 6px; padding-left: 6px;'><b>字号</b></div>\
+								<div style='text-align: center; height: 20px; background-image: url(images/editor/menu_title.gif); padding-top: 6px; padding-left: 6px;'><b>×ÖºÅ</b></div>\
 									<div style='height: 388px!important ;height: 306px; background-image: url(images/editor/menu_bg.gif);' id='EDiaryEditorFontSizeBox'>\
 						";
 					}
@@ -216,7 +216,7 @@ EDiaryEditor = {
 						_toolbarStr3 += "\
 							<!-- Font Style Menu -->\
 							<div style='cursor: default; position: absolute; width: 163px; top: 32px; left: 243px; display: none;' id='EDiaryEditorFontStyleItem'>\
-								<div style='text-align: center; height: 20px; background-image: url(images/editor/menu_title.gif); padding-top: 6px; padding-left: 6px;'><b>段落</b></div>\
+								<div style='text-align: center; height: 20px; background-image: url(images/editor/menu_title.gif); padding-top: 6px; padding-left: 6px;'><b>¶ÎÂä</b></div>\
 									<div style='height: 231px!important ;height: 187px; background-image: url(images/editor/menu_bg.gif);' id='EDiaryEditorFontStyleBox'>\
 						";
 					}
@@ -323,7 +323,7 @@ EDiaryEditor = {
 
 		this.addHTML($("EDiaryEditorToolBar"), _toolbarStr9);	
 
-		var _toolbarStr9 = "<div style='position: absolute; left: 483px; top: 41px; display: none;' id='EDiaryEditorRsave' title='恢复上一次未成功发表内容'><img src='images/editor/rsave.gif' csrc='/images/rsave.gif' bsrc='/images/rsave_over.gif' onmouseover='this.src=this.bsrc' onmouseout='this.src=this.csrc'></div>";
+		var _toolbarStr9 = "<div style='position: absolute; left: 483px; top: 41px; display: none;' id='EDiaryEditorRsave' title='»Ö¸´ÉÏÒ»´ÎÎ´³É¹¦·¢±íÄÚÈÝ'><img src='images/editor/rsave.gif' csrc='/images/rsave.gif' bsrc='/images/rsave_over.gif' onmouseover='this.src=this.bsrc' onmouseout='this.src=this.csrc'></div>";
 		this.addHTML($("EDiaryEditorToolBar"), _toolbarStr9);
 		
 		
@@ -343,7 +343,7 @@ EDiaryEditor = {
 		this.iframe = $("editor_body_area");
 		if(window._isIE) {
 			this.iframe.addBehavior("#default#userData");
-			// 恢复文章内容功能模块 
+			// »Ö¸´ÎÄÕÂÄÚÈÝ¹¦ÄÜÄ£¿é 
 			function EDiaryEditorRsave() {
 				try{
 					if(readCookie("EDiaryEditor_RSave") == "false")return;
@@ -351,8 +351,8 @@ EDiaryEditor = {
 					oPersist.load("EDiaryEditorRsave");
 					var oData = oPersist.getAttribute("Edit");
 					if(oData != null && oData != "" && Request("ReadCookie")==1) {
-						if(confirm("您有一篇未完成的内容，是否确认恢复？")) {
-							if(_this.iframe.style.display != "none") {// 设计模式
+						if(confirm("ÄúÓÐÒ»ÆªÎ´Íê³ÉµÄÄÚÈÝ£¬ÊÇ·ñÈ·ÈÏ»Ö¸´£¿")) {
+							if(_this.iframe.style.display != "none") {// Éè¼ÆÄ£Ê½
 								_this.iframe.contentWindow.document.body.innerHTML = oData;
 							}
 							else {
@@ -367,7 +367,7 @@ EDiaryEditor = {
 				}catch(e) {};
 			}
 			this.EDiaryEditorRsave = EDiaryEditorRsave;
-			// 成功，删除保存的内容
+			// ³É¹¦£¬É¾³ý±£´æµÄÄÚÈÝ
 			this.delEditorRsave = function () {
 				writeCookie("EDiaryEditor_RSave", "false", 1);
 				var oPersist = _this.iframe;
@@ -382,13 +382,13 @@ EDiaryEditor = {
 				writeCookie("EDiaryEditor_RUser", "null", 1000);
 				delEditorRsave();
 			}
-			// 定时保存文章正文内容
+			// ¶¨Ê±±£´æÎÄÕÂÕýÎÄÄÚÈÝ
 			this.iframe.addBehavior("#default#userData");
 			setInterval(function () {
 				if(readCookie("EDiaryEditor_RSave") == "false")return;
 				if(_this.iframe.contentWindow.document.body.innerHTML.length > 5000) return;
 				if(sState != "iframe")return;
-				if(_this.iframe.style.display != "none") {// 设计模式
+				if(_this.iframe.style.display != "none") {// Éè¼ÆÄ£Ê½
 					if(_this.iframe.contentWindow.document.body.innerHTML.toLowerCase() == "<div>&nbsp;</div>") return;
 					if(_this.iframe.contentWindow.document.body.innerHTML.toLowerCase() == "<div></div>") return;
 					if(_this.iframe.contentWindow.document.body.innerHTML.toLowerCase() == "<p>&nbsp;</p>") return;
@@ -397,7 +397,7 @@ EDiaryEditor = {
 					oPersist.setAttribute("Edit",_this.iframe.contentWindow.document.body.innerHTML);
 					oPersist.save("EDiaryEditorRsave");
 				}
-				else {// 代码模式
+				else {// ´úÂëÄ£Ê½
 					if($("editor_body_textarea").value.toLowerCase() == "<div>&nbsp;</div>") return;
 					if($("editor_body_textarea").value.toLowerCase() == "<div></div>") return;
 					if($("editor_body_textarea").value.toLowerCase() == "<p>&nbsp;</p>") return;
@@ -441,7 +441,7 @@ EDiaryEditor = {
 							}
 							var sRangeType = _this.getElement();
 							if (sRangeType.tagName.toLowerCase() != "img"){
-								alert('请选中图片后操作!')
+								alert('ÇëÑ¡ÖÐÍ¼Æ¬ºó²Ù×÷!')
 							return;
 							}
 						}
@@ -518,10 +518,10 @@ EDiaryEditor = {
 		}
 
 		////////////////////////////////////////////////////////////
-		// 需要优化
+		// ÐèÒªÓÅ»¯
         function eventObserver(){
             var es =_this.iframe.contentWindow.document.body.keyupEvents;
-				/* 字体预设
+				/* ×ÖÌåÔ¤Éè
                 if(es.fontsize){
                     reaplceFontName("fontsize",es.fontsize)
                 }
@@ -534,8 +534,8 @@ EDiaryEditor = {
             var idocument= _this.iframe.contentWindow.document;
 
             if(window._isIE) {
-				if(v == "楷体" && !window._isVista) {
-					v = "楷体_GB2312";
+				if(v == "¿¬Ìå" && !window._isVista) {
+					v = "¿¬Ìå_GB2312";
 				}
                 idocument.execCommand("fontname", "", "EDiaryEditor_Temp_FontName");
                  if(!idocument.body.keyupEvents)
@@ -672,7 +672,7 @@ EDiaryEditor = {
 				_this.iframe.contentWindow.document.body.innerHTML = _this.iframe.contentWindow.document.body.innerHTML;
 			}
 			else {
-				alert("请选中图片后操作!");
+				alert("ÇëÑ¡ÖÐÍ¼Æ¬ºó²Ù×÷!");
 			}
 		}
 		function swapMode(event, Act) {
@@ -779,7 +779,7 @@ EDiaryEditor = {
 			scrollbar-track-color: #f4f4f0;\
 			scrollbar-darkshadow-color: #ebebe4;\
 			word-wrap: break-word;\
-			font-family: '宋体', 'Courier New';\
+			font-family: 'ËÎÌå', 'Courier New';\
 		}\
 		p {\
 			margin: 0px;\
@@ -814,13 +814,13 @@ EDiaryEditor = {
 		_this.iframeWindow = _this.iframe.contentWindow;
 		_this.iframeDocument = _this.iframeWindow.document;
 
-		// 初始化IFRAME中的事件 
+		// ³õÊ¼»¯IFRAMEÖÐµÄÊÂ¼þ 
 		this.iframeEventCore.init(this);
 		_this.iframe.contentWindow.document.onclick = document.onclick = function (event) {
 			event = event || window.event;
 			FontMenuFuncHash.hide(event, FontMenuFuncHash);
 		}
-		// zly, moz 下点击编辑区清除菜单无效, try 解决单纯判断浏览器引起的误差。
+		// zly, moz ÏÂµã»÷±à¼­ÇøÇå³ý²Ëµ¥ÎÞÐ§, try ½â¾öµ¥´¿ÅÐ¶Ïä¯ÀÀÆ÷ÒýÆðµÄÎó²î¡£
 		try{
 			_this.iframe.contentWindow.document.addEventListener('click', function (event) {
 				event = event || window.event;
@@ -860,7 +860,7 @@ EDiaryEditor = {
 				if(pasteData && pasteData.length > 0) {
 					var wordPattern = /<\w[^>]* class="?MsoNormal"?/gi;
 					if(wordPattern.test(pasteData)) {
-						if(confirm("文章有多余代码，可能影响顺利发表，是否确认清除？\r\n\r\n提示：您的文字将完整保留。")) {
+						if(confirm("ÎÄÕÂÓÐ¶àÓà´úÂë£¬¿ÉÄÜÓ°ÏìË³Àû·¢±í£¬ÊÇ·ñÈ·ÈÏÇå³ý£¿\r\n\r\nÌáÊ¾£ºÄúµÄÎÄ×Ö½«ÍêÕû±£Áô¡£")) {
 							pasteData = clearFromWord(pasteData);
 						} 
 						else {	
@@ -957,21 +957,21 @@ EDiaryEditor = {
 			for(var i = 0; i < oChild.length; i++){
 				if(oChild[i].tagName){
 					
-					// 去掉首尾空格
-					oChild[i].innerHTML	= oChild[i].innerHTML.split('&nbsp;').join('');
-					oChild[i].innerHTML	= oChild[i].innerHTML.replace(/(^[ |　|]*)|([ |　|]*$)/g, "");
-					oChild[i].innerHTML	= oChild[i].innerHTML.split('').join('&nbsp;');
+					// È¥µôÊ×Î²¿Õ¸ñ
+					oChild[i].innerHTML	= oChild[i].innerHTML.split('&nbsp;').join('¨¼');
+					oChild[i].innerHTML	= oChild[i].innerHTML.replace(/(^[ |¡¡|¨¼]*)|([ |¡¡|¨¼]*$)/g, "");
+					oChild[i].innerHTML	= oChild[i].innerHTML.split('¨¼').join('&nbsp;');
 					
-					// 是否已经排过版,使用 2em 会使段落排版混乱［h1,h2混］,可设计默认 28 像素。通过计算子节点 fontSize 方式同样有此问题
+					// ÊÇ·ñÒÑ¾­ÅÅ¹ý°æ,Ê¹ÓÃ 2em »áÊ¹¶ÎÂäÅÅ°æ»ìÂÒ£Ûh1,h2»ì£Ý,¿ÉÉè¼ÆÄ¬ÈÏ 28 ÏñËØ¡£Í¨¹ý¼ÆËã×Ó½Úµã fontSize ·½Ê½Í¬ÑùÓÐ´ËÎÊÌâ
 					if(!oChild[i].style.textIndent){
 						oChild[i].style.textIndent	= '2em';
-					// 默认排版前
+					// Ä¬ÈÏÅÅ°æÇ°
 					}else{
 						oChild[i].style.textIndent	= '';
 					}
-				// 纯文本
+				// ´¿ÎÄ±¾
 				}else{
-					oBody.innerHTML = '<div style="text-indent:2em;">' + oBody.innerHTML.replace(/(^[ |　]*)|([ |　]*$)/g, ""); + '</div>';
+					oBody.innerHTML = '<div style="text-indent:2em;">' + oBody.innerHTML.replace(/(^[ |¡¡]*)|([ |¡¡]*$)/g, ""); + '</div>';
 				}
 			}
 		}
@@ -1013,12 +1013,12 @@ EDiaryEditor = {
 					catch(e){}
 				}
 				else {
-					alert("请选择一段文字后操作!");
+					alert("ÇëÑ¡ÔñÒ»¶ÎÎÄ×Öºó²Ù×÷!");
 				}
 			}
 			else {
 				if(rng.text == "") {
-					alert("请选择一段文字后操作!");
+					alert("ÇëÑ¡ÔñÒ»¶ÎÎÄ×Öºó²Ù×÷!");
 				}
 				else {
 					_this.iframe.contentWindow.document.execCommand("insertHTML", false, html);
@@ -1038,7 +1038,7 @@ EDiaryEditor = {
 				_this.iframe.contentWindow.document.body.innerHTML = str;
 			}
 			else {
-				alert("此功能暂时不支持您现在的浏览器，请使用IE浏览");
+				alert("´Ë¹¦ÄÜÔÝÊ±²»Ö§³ÖÄúÏÖÔÚµÄä¯ÀÀÆ÷£¬ÇëÊ¹ÓÃIEä¯ÀÀ");
 			}
 		}
 		else if(CMD == "textarea") {
@@ -1056,7 +1056,7 @@ EDiaryEditor = {
 				rng = selection.getRangeAt(selection.rangeCount - 1).cloneRange();
 				rng.text = rng.toString();
 			}
-			_sVal = rng.text == "" ? "请在文本框输入文字" : rng.text;
+			_sVal = rng.text == "" ? "ÇëÔÚÎÄ±¾¿òÊäÈëÎÄ×Ö" : rng.text;
 			var html = "<table style='border:1px solid #999;width:80%;font-size:12px;' align='center'><tr><td>"+ _sVal +"</td></tr></table>";
 		
 			frameWin.focus();
@@ -1083,7 +1083,7 @@ EDiaryEditor = {
 				this.iframe.contentWindow.focus();
 			}
 			else {
-				alert("该浏览器不支持本功能");
+				alert("¸Ãä¯ÀÀÆ÷²»Ö§³Ö±¾¹¦ÄÜ");
 			}
 		}
 		else {
@@ -1126,7 +1126,7 @@ EDiaryEditor = {
 };
 
 
-function Request(name) {//获取页面ID参数
+function Request(name) {//»ñÈ¡Ò³ÃæID²ÎÊý
 var reg = new RegExp("(^|\\?|&)"+ name +"=([^&]*)(\\s|&|$)", "i");
 if (reg.test(location.href))
 return unescape(RegExp.$2.replace(/\+/g, " "));
